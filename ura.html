@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ura · KSBR lo-fi -prototyyppi</title>
+
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/bundle.css">
+<link rel="stylesheet" href="css/nav.css">
+<style>
+@font-face{font-family:"Lofi Head";src:url(assets/archivo.woff2) format("woff2");font-weight:700 700;font-stretch:102% 102%;font-display:swap}
+@font-face{font-family:"Lofi Sans";src:url(assets/archivo.woff2) format("woff2");font-weight:400 700;font-stretch:103.5% 103.5%;font-display:swap}
+body{margin:0;background:#fff}
+a{color:#3f4c55}a:hover{color:#252d32}
+.recruiter-mini{display:flex;flex-wrap:wrap;align-items:center;gap:8px 24px;margin-top:8px;padding-top:24px;border-top:1px solid var(--surface);font-size:16px;line-height:24px}
+.recruiter-mini b{display:block;font-size:14px;line-height:20px;color:var(--ink-2-strong)}
+.recruiter-mini a{display:inline-flex;align-items:center;gap:8px;font-weight:700;text-decoration:none}
+.recruiter-mini .b-ico{width:18px;height:18px;color:var(--accent)}
+.filters{display:grid;grid-template-columns:1fr 1fr auto;gap:16px;align-items:end;padding:24px;background:#fff;border:1px solid var(--line);border-radius:4px}
+.filters .b-field{min-width:0}
+.jobs{display:grid;margin-top:24px;border-top:1px solid var(--line)}
+.job{display:grid;grid-template-columns:4fr 3fr 2fr 2fr 24px;gap:24px;align-items:center;padding:24px 8px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.job:hover{background:#fff}
+.job__t{font-size:20px;line-height:28px;font-weight:700}
+.job__m{display:inline-flex;align-items:center;gap:6px;font-size:16px;line-height:24px;color:var(--ink-2-strong)}
+.job__m .b-ico{width:16px;height:16px}
+.job__go{width:10px;height:10px;border:solid var(--accent);border-width:2.5px 2.5px 0 0;transform:rotate(45deg)}
+.jobs-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;margin-top:24px}
+.open-app{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px;margin-top:40px;padding:32px;background:#fff;border:1px solid var(--line);border-radius:4px}
+.open-app h3{margin:0 0 4px;font-size:22px;line-height:28px;font-weight:700}
+.open-app p{margin:0;font-size:16px;line-height:24px;color:var(--ink-2-strong)}
+.place{display:grid;grid-template-columns:5fr 7fr;gap:80px;align-items:start}
+.place blockquote{margin:0;font-size:28px;line-height:38px;font-weight:700}
+.place blockquote span{color:var(--accent)}
+.values{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;margin-top:72px}
+.value{padding-top:24px;border-top:1px solid var(--line)}
+.value small{display:block;margin:-4px 0 8px;font-size:14px;line-height:20px;font-weight:500;color:var(--ink-2)}
+.value h3{margin:8px 0;font-size:24px;line-height:30px;font-weight:700}
+.value p{margin:0;font-size:16px;line-height:24px;color:var(--ink-2-strong)}
+.perks{display:grid;grid-template-columns:5fr 7fr;gap:80px;align-items:stretch}
+.travel-list{display:grid;margin:32px 0 0}
+.travel-list div{display:grid;grid-template-columns:180px 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--line);font-size:16px;line-height:24px}
+.travel-list dt{font-weight:700}
+.travel-list dd{margin:0}
+.benefits{margin-top:64px;padding-top:32px;border-top:2px solid var(--ink)}
+.benefits ul{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin:24px 0 0;padding:0;list-style:none}
+.benefits li{display:grid;align-content:start;gap:8px;padding:32px 28px;background:#fff;border:1px solid var(--line);border-radius:4px;font-size:16px;line-height:24px;color:var(--ink-2-strong)}
+.benefits li b{display:block;margin-top:12px;font:700 22px/28px var(--font-head);color:var(--ink)}
+.bn-ico{display:block;width:72px;height:72px;margin-left:-6px}
+.bn-ico svg{width:72px;height:72px}
+.benefits h3.b-h3{font-size:32px;line-height:38px}
+.perks .b-media{aspect-ratio:auto;height:100%;min-height:420px}
+.paths{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(3,auto);column-gap:24px;row-gap:0}
+.path{display:grid;grid-row:span 3;grid-template-rows:subgrid;gap:24px;padding:28px;background:#fff;border:1px solid var(--line);border-radius:4px}
+.path__head{display:grid;gap:8px;align-content:start}
+.path h3{margin:0;font-size:22px;line-height:28px;font-weight:700}
+.path p{margin:0;font-size:16px;line-height:24px;color:var(--ink-2-strong)}
+.path .grp__r{color:var(--ink);font-weight:500}
+.story{display:grid;gap:8px;align-content:start;padding-top:24px;border-top:1px solid var(--surface);text-decoration:none;color:var(--ink)}
+.story .b-media{margin-bottom:8px}
+.story h4{margin:0;font-size:18px;line-height:24px;font-weight:700}
+.paths>*,.path>*{min-width:0}
+.path .story h4,.path h4{font-size:18px!important;line-height:24px!important}
+.story__who{margin:0;font-size:14px;line-height:20px;color:var(--ink-2-strong)}
+.story__who b{display:block;color:var(--ink);font-size:16px;line-height:24px}
+.summer{display:grid;grid-template-columns:7fr 5fr;gap:80px;align-items:center}
+.rec{display:grid;grid-template-columns:4fr 8fr;gap:80px;align-items:center}
+.rec-card{display:grid;grid-template-columns:160px 1fr;gap:32px;align-items:center;padding:40px;background:#fff;border-radius:4px}
+.rec-card .b-person__img{width:160px;height:160px}
+.rec-card .b-person__name{font-size:24px;line-height:32px}
+.rec-card .b-btns{margin-top:16px}
+@media (max-width:900px){
+.filters,.job,.place,.values,.perks,.benefits ul,.travel-list div,.paths,.summer,.rec,.rec-card,.b-footer__top{grid-template-columns:1fr;gap:16px}
+.paths{grid-template-rows:none;row-gap:24px}.path{grid-row:auto;grid-template-rows:none}
+.job{gap:4px;padding:20px 0}.job{position:relative;padding-right:32px;min-height:44px}.job__go{position:absolute;right:8px;top:50%;margin-top:-5px}
+}
+.hf-sec{padding:72px 20px}.hf-h2{font-size:34px;line-height:40px}
+.hf-hero{min-height:640px}.hf-hero__text{padding:0 20px 120px}.hf-hero h1{font-size:52px;line-height:50px}
+.hf-tasks{grid-template-columns:1fr;margin:-48px 20px 0}.hf-task+.hf-task{border-left:0;border-top:1px solid var(--surface)}
+.hf-num b{font-size:88px}.hf-edge .tx{padding:56px 20px}.hf-band__text{padding:0 20px 48px}.hf-band h2{font-size:30px;line-height:36px}
+.hf-herostats{margin:0 20px}.hf-herostats b{font-size:48px}
+.hf-hero--page .recruiter-mini b{color:var(--on-dark-muted)}
+.hf .b-section{padding:72px 20px}.hf .b-h2{font-size:34px;line-height:40px}.hf .b-h1{font-size:44px;line-height:48px}
+.hf-hero--page{min-height:600px}.hf-hero--page h1,.hf-hero--page .b-h1{font-size:44px;line-height:48px}.hf-hero--page .hf-hero__text{padding:0 20px 72px}
+@media (max-width:1200px){.hf-ind,.hf-steps{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:600px){.hf .hf-hero h1,.hf .hf-hero--page h1{overflow-wrap:anywhere}}
+@media (max-width:600px){.hf-ind>:last-child:nth-child(odd){grid-column:1/-1}}
+body.menu-open{overflow:hidden}
+.lofi .story .b-media{min-height:0}
+@media (max-width:900px){
+  .km-c{grid-template-columns:1fr!important;gap:32px!important}
+  .b-why__grid,#miksi-grk .b-why__grid{grid-template-columns:1fr 1fr!important;row-gap:40px}
+  .hf-sm,.hf-mx__b .b-method{grid-template-columns:1fr!important}
+  .t3__c>p{white-space:normal}
+}
+@media (max-width:600px){
+  .b-why__grid,#miksi-grk .b-why__grid{grid-template-columns:1fr!important}
+  .b-root :where(h1,h2,h3),.b-root :where(h1,h2,h3) a{hyphens:auto;-webkit-hyphens:auto}
+}
+
+</style>
+</head>
+<body>
+<div class="b-root hf lofi" style="width: 100%;">
+
+
+<header class="b-nav">
+  <div class="b-nav__util b-nav__util--v2"><span class="b-nav__util-r"><a href="https://ollirimpilainen.github.io/grk-lofi-proto/">GRK-konserni ↗</a><a href="tyhja.html?s=Media">Media</a><span class="b-nav__util-sep" aria-hidden="true"></span><a class="b-nav__util-search" href="#"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>Haku</a><a href="index.html" aria-current="true">FI</a><a href="tyhja.html?s=KSBR%20in%20English" lang="en">EN</a><a href="tyhja.html?s=KSBR%20p%C3%A5%20svenska" lang="sv">SV</a></span></div>
+  <div class="b-nav__bar">
+    <a class="b-nav__brand" href="index.html"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="KSBR, A GRK Company" width="120" height="40"></a>
+    <nav class="b-nav__menu" aria-label="Päävalikko">
+      <a class="b-nav__item b-nav__item--menu" href="tyhja.html?s=Toimialat">Toimialat</a>
+      <a class="b-nav__item" href="referenssit.html">Referenssit</a>
+      <a class="b-nav__item" href="talvibetonointi.html">Ajankohtaista</a>
+      <a class="b-nav__item b-nav__item--menu" href="ura.html" aria-current="page">Ura</a>
+      <a class="b-nav__item b-nav__item--menu" href="ksbr.html">KSBR</a>
+    </nav>
+    <a class="b-nav__contact" href="yhteystiedot.html">Yhteystiedot</a>
+  </div>
+</header>
+<main id="sisalto">
+
+<section class="hf-hero hf-hero--page">
+  <ol class="b-crumbs"><li><a href="index.html">Etusivu</a></li><li aria-current="page">Ura</li></ol>
+  <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="KSBR:n porukka Koskensillan pysäköintitalossa">
+  <div class="hf-hero__text">
+    <h1 class="b-h1">Meillä et pääse helpolla, mutta pääset eteenpäin</h1>
+    <p class="b-lead">Rakennamme Suomen vaativimpia kohteita, ja lupauksen lunastavat ihmisemme: työmailla, toimistoissa ja tien päällä. Ei helppo polku, mutta ihmisen kokoinen ja kasvun paikkoja täynnä.</p>
+    <div class="b-btns"><a class="b-btn" href="#avoimet">Avoimet työpaikat</a></div>
+    </div>
+</section>
+
+<section class="b-section b-section--gray" id="avoimet"><div class="b-inner">
+  <div class="b-head"><h2 class="b-h2">Avoimet työpaikat</h2></div>
+  <form class="filters" role="search">
+    <div class="b-field"><label for="ura-ammatti">Ammattiryhmä</label><select class="b-select" id="ura-ammatti"><option>Kaikki</option><option>Työmaa</option><option>Työnjohto ja projektit</option><option>Toimisto ja asiantuntijat</option><option>Kesätyöt ja harjoittelu</option></select></div>
+    <div class="b-field"><label for="ura-paikka">Paikkakunta</label><select class="b-select" id="ura-paikka"><option>Kaikki</option><option>Pihtipudas</option><option>Oulu</option><option>Vantaa</option><option>Lappeenranta</option><option>Nivala</option><option>Ruotsi</option><option>Työmaat ympäri Suomen</option></select></div>
+    <p class="b-small" style="margin: 0 0 14px;">5 uusinta paikkaa</p>
+  </form>
+  <div class="jobs"><a class="job" href="tyhja.html?s=Timpuri"><span class="job__t">Timpuri</span><span class="job__m">Työmaa</span><span class="job__m"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>Pohjois-Pohjanmaa</span><span class="job__go" aria-hidden="true"></span></a><a class="job" href="tyhja.html?s=Raudoittaja"><span class="job__t">Raudoittaja</span><span class="job__m">Työmaa</span><span class="job__m"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>Keski-Suomi</span><span class="job__go" aria-hidden="true"></span></a><a class="job" href="tyhja.html?s=Vastaava%20ty%C3%B6njohtaja%2C%20tuulivoima"><span class="job__t">Vastaava työnjohtaja, tuulivoima</span><span class="job__m">Työnjohto ja projektit</span><span class="job__m"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>Oulu</span><span class="job__go" aria-hidden="true"></span></a><a class="job" href="tyhja.html?s=Projektip%C3%A4%C3%A4llikk%C3%B6%2C%20teollisuus"><span class="job__t">Projektipäällikkö, teollisuus</span><span class="job__m">Työnjohto ja projektit</span><span class="job__m"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>Vantaa</span><span class="job__go" aria-hidden="true"></span></a><a class="job" href="tyhja.html?s=Kustannuslaskija"><span class="job__t">Kustannuslaskija</span><span class="job__m">Toimisto ja asiantuntijat</span><span class="job__m"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>Pihtipudas tai Oulu</span><span class="job__go" aria-hidden="true"></span></a></div>
+  <div class="jobs-foot"><a class="b-link" href="tyhja.html?s=Kaikki%20paikat">Kaikki paikat</a></div>
+  <div class="open-app"><div><h3>Etkö löytänyt sopivaa?</h3><p>Lähetä avoin hakemus. Katsomme jokaisen hakemuksen, kun uusia työmaita alkaa.</p></div><a class="b-btn b-btn--secondary" href="tyhja.html?s=L%C3%A4het%C3%A4%20avoin%20hakemus">Lähetä avoin hakemus</a></div>
+</div></section>
+
+<section class="b-section"><div class="b-inner">
+  <div class="place">
+    <div><h2 class="b-h2">Ratkaisijan paikka</h2></div>
+    <div>
+      <blockquote>KSBR on ratkaisijoiden joukkue. Suunnittelu tai toteutus, myynnissä tai montussa: <span>meitä yhdistää palo tehdä paremmin.</span></blockquote>
+      <p class="b-body" style="margin-top: 24px;">Kaikkien ei tarvitse olla mestareita tai moniosaajia. Voit olla kokenut konkari, joka siirtää tietoa eteenpäin, nuori lupaus, joka etsii kykyjensä kattoa, tai hiljainen oman taidon syventäjä. Tärkeintä on nähdä, missä vastuuseen pitää tarttua, ja oppia tekemällä.</p>
+    </div>
+  </div>
+  <div class="tp-why" style="margin-top:64px"><div><h3>Terveenä kotiin</h3><small>Turvallisuus</small><p>Pyrimme olemaan alan turvallisin työnantaja. Jokainen palaa työmaalta terveenä kotiin.</p></div><div><h3>Yhdet puheet riittää</h3><small>Luottamus</small><p>Teemme mitä lupaamme, emmekä lupaa sellaista, mihin emme pysty.</p></div><div><h3>Työn jälki kertoo kaiken</h3><small>Laatu</small><p>Emme tyydy keskinkertaiseen. Tekemästä työstä saa olla ylpeä.</p></div><div><h3>Kaveria ei jätetä</h3><small>Inhimillisyys</small><p>Kohtaamme toisemme tasavertaisesti ja tuemme jokaisen kehittymistä.</p></div></div>
+</div></section>
+
+<section class="b-section b-section--gray"><div class="b-inner">
+  <div class="perks">
+    <div>
+      <h2 class="b-h2">Missä työskentelet</h2>
+      <p class="b-body" style="margin-top: 16px;">Työmaat ovat ympäri Suomea ja Pohjois-Ruotsia. Toimisto- ja asiantuntijatyö on lähellä omaa toimipistettä.</p>
+      <dl class="travel-list">
+        <div><dt>Toimipisteet</dt><dd>Pihtipudas, Oulu, Vantaa, Lappeenranta, Nivala ja Pohjois-Ruotsi</dd></div>
+        </dl>
+    </div>
+    <div class="b-media"><span>Kartta: toimipisteet ja käynnissä olevat työmaat</span></div>
+  </div>
+  <div class="benefits">
+    <h3 class="b-h3">Mitä saat meiltä</h3>
+    <ul><li><span class="bn-ico" aria-hidden="true"><svg viewBox="0 0 124 124" fill="none" stroke="#000" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><circle cx="62" cy="64" r="26" stroke="#4AABC2"></circle><circle cx="62" cy="64" r="16" stroke="#4AABC2"></circle><path d="M24 26v30M18 26v14a6 6 0 0 0 12 0V26M24 56v42M100 98V26c-8 6-10 18-10 30h10"></path><path d="M14 104h96"></path></svg></span><b>Lounasetu ja virikesetelit</b>Arjen etuina lounas ja liikunta- tai kulttuurisetelit.</li><li><span class="bn-ico" aria-hidden="true"><svg viewBox="0 0 124 124" fill="none" stroke="#000" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><path d="M30 98V74h14v24M56 98V58h14v40M82 98V42h14v56" stroke="#4AABC2"></path><path d="M20 98h88M24 62l26-20 18 10 30-26M86 26h12v12"></path></svg></span><b>Tulospalkkaus</b>Palkan lisäksi tulospalkkio, kun yhteiset tavoitteet täyttyvät.</li><li><span class="bn-ico" aria-hidden="true"><svg viewBox="0 0 124 124" fill="none" stroke="#000" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><path d="M14 46 62 24l48 22-48 22z"></path><path d="M34 56v24c0 8 13 14 28 14s28-6 28-14V56" stroke="#4AABC2"></path><path d="M110 46v30"></path><path d="M106 76h8v10h-8z" stroke="#4AABC2"></path></svg></span><b>Koulutus ja urapolku</b>Mahdollisuus kouluttautua ja edetä. Harjoittelusta voi jatkaa vakituiseen.</li><li><span class="bn-ico" aria-hidden="true"><svg viewBox="0 0 124 124" fill="none" stroke="#000" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><circle cx="30" cy="44" r="10"></circle><circle cx="62" cy="44" r="10"></circle><circle cx="94" cy="44" r="10"></circle><path d="M14 82c0-10 7-18 16-18s16 8 16 18M46 82c0-10 7-18 16-18s16 8 16 18M78 82c0-10 7-18 16-18s16 8 16 18"></path><path d="M14 98h96" stroke="#4AABC2"></path></svg></span><b>Matala organisaatio</b>Vähän byrokratiaa: vastuuta saa sitä mukaa, kun on valmis sitä ottamaan.</li></ul>
+  </div>
+</div></section>
+
+<section class="b-section"><div class="b-inner">
+  <div class="b-head"><h2 class="b-h2">Kenelle ja millaisia polkuja</h2><p class="b-body">Neljä ammattiryhmää ja tarina jokaisesta: miltä ura KSBR:llä näyttää.</p></div>
+  <div class="paths"><div class="path"><div class="path__head"><h3>Työmaa</h3><p class="grp__r">Timpurit, raudoittajat ja maanrakentajat</p><p>Oma väki tekee muotit, raudoitukset ja valut. Opit tekemällä konkarien rinnalla.</p></div><a class="b-link b-link--sm path__jobs" href="#avoimet">Avoimet paikat</a></div><div class="path"><div class="path__head"><h3>Työnjohto ja projektit</h3><p class="grp__r">Työnjohtajat, vastaavat työnjohtajat, projektipäälliköt ja HSEQ</p><p>Vastuuta saa niin paljon kuin olet valmis kantamaan, ja päätökset tehdään työmaalla.</p></div><a class="story" href="tyhja.html?s=%E2%80%9DTy%C3%B6turvallisuus%20ei%20ole%20pelkk%C3%A4%C3%A4%20v%C3%A4lineurheilua%E2%80%9D"><div class="b-media b-media--wide"><img loading="lazy" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Jenni Veijola"></div><h2 class="hf-fh">”Työturvallisuus ei ole pelkkää välineurheilua”</h2><p class="story__who"><b>Jenni Veijola</b>HSEQ-päällikkö</p><span class="b-link b-link--sm">Lue tarina</span></a><a class="b-link b-link--sm path__jobs" href="#avoimet">Avoimet paikat</a></div><div class="path"><div class="path__head"><h3>Toimisto ja asiantuntijat</h3><p class="grp__r">Laskenta, suunnittelu, talous ja myynti</p><p>Asiantuntijana olet lähellä työmaata ja näet työsi jäljen.</p></div><a class="story" href="tyhja.html?s=%E2%80%9DIsois%C3%A4n%20turvakenkien%20j%C3%A4ljiss%C3%A4%20rakennusalalle%E2%80%9D"><div class="b-media b-media--wide"><img loading="lazy" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Andreas Olson"></div><h2 class="hf-fh">”Isoisän turvakenkien jäljissä rakennusalalle”</h2><p class="story__who"><b>Andreas Olson</b>Myyntipäällikkö, KSBR Sverige</p><span class="b-link b-link--sm">Lue tarina</span></a><a class="b-link b-link--sm path__jobs" href="#avoimet">Avoimet paikat</a></div><div class="path"><div class="path__head"><h3>Opiskelijat</h3><p class="grp__r">Kesätyöt, harjoittelut ja opinnäytetyöt</p><p>Aloita kesätyöstä tai harjoittelusta, ja jatka siitä eteenpäin.</p></div><a class="story" href="tyhja.html?s=%E2%80%9DHyv%C3%A4%20ty%C3%B6ilmapiiri%20ja%20etenemis%C2%ADmahdollisuudet%E2%80%9D"><div class="b-media b-media--wide"><img loading="lazy" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Sami Laurila"></div><h2 class="hf-fh">”Hyvä työilmapiiri ja etenemis­mahdollisuudet”</h2><p class="story__who"><b>Sami Laurila</b></p><span class="b-link b-link--sm">Lue tarina</span></a><a class="b-link b-link--sm path__jobs" href="#avoimet">Avoimet paikat</a></div></div>
+</div></section>
+
+<section class="b-section" style="background: var(--surface-2);"><div class="b-inner summer">
+  <div>
+    <h2 class="b-h2" style="margin-bottom: 24px;">Kesätyö ja harjoittelu</h2>
+    <p class="b-lead">Moni meistä aloitti kesätyöstä. Pääset työmaalle oikeisiin tehtäviin, ja hyvä kesä voi jatkua harjoitteluna, opinnäytetyönä tai vakituisena paikkana.</p>
+    <p class="b-body" style="margin-top: 16px;">Kesän haku on auki.</p>
+    <div class="b-btns" style="margin-top: 24px;"><a class="b-btn" href="tyhja.html?s=Hae%20kes%C3%A4t%C3%B6ihin">Hae kesätöihin</a></div>
+  </div>
+  <div class="b-media"><img loading="lazy" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Nuori KSBR:läinen työmaalla"></div>
+</div></section>
+
+<section class="b-section" id="yhteyshenkilot"><div class="b-inner">
+  <div class="b-lightform b-lightform--flush">
+    <div class="b-head" style="margin: 0; align-content: start;"><h2 class="b-h3">Kysy rekrytoinnista</h2><p class="b-body">Soita tai kirjoita, jos mietit, mikä paikka sopisi sinulle.</p>
+      <div class="b-linklist"><p class="b-h4">Etsitkö jotain muuta?</p><a class="b-link b-link--sm" href="#avoimet">Avoimet työpaikat</a><a class="b-link b-link--sm" href="yhteystiedot.html">Kaikki yhteystiedot</a></div>
+    </div>
+    <form class="b-form">
+      <div class="b-field"><label for="in-nimi">Nimi *</label><input class="b-input" id="in-nimi" type="text" autocomplete="name"></div>
+      <div class="b-field"><label for="in-email">Sähköposti *</label><input class="b-input" id="in-email" type="email" autocomplete="email"></div>
+      <div class="b-field b-field--full"><label for="in-viesti">Kysymyksesi *</label><textarea class="b-textarea" id="in-viesti" placeholder="Esimerkiksi mikä tehtävä kiinnostaa ja missä päin haluaisit työskennellä."></textarea></div>
+      <p class="b-small b-field--full">Käsittelemme tietoja <a href="tyhja.html?s=Tietosuojaseloste">tietosuojaselosteen</a> mukaisesti.</p>
+      <div class="b-form__foot"><button class="b-btn" type="button">Lähetä</button></div>
+    </form>
+  </div>
+</div></section>
+
+</main>
+<footer class="b-footer hf-foot">
+  <div class="hf-foot__top">
+    <div class="hf-foot__brand">
+      <a class="hf-foot__logo" href="index.html"><img class="b-footer__logo" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="KSBR, A GRK Company" width="96" height="72"></a>
+      <p class="hf-foot__tag">Vaativan rakentamisen erikoisjoukko Suomessa ja Ruotsissa.</p>
+      <p class="hf-foot__tel">Asematie 5, 44800 Pihtipudas · <a href="mailto:info@ksbr.fi">info@ksbr.fi</a></p>
+      <div class="hf-foot__acts"><a class="b-btn" href="yhteystiedot.html">Ota yhteyttä</a><a class="hf-foot__more" href="tarjouspyynto.html">Tarjouspyyntö</a></div>
+    </div>
+    <nav class="hf-foot__nav" aria-label="Alatunnisteen valikko">
+      <div><h2 class="hf-foot__h"><a href="tyhja.html?s=Toimialat">Toimialat</a></h2><ul>
+        <li><a href="tuulivoima.html">Energia</a></li><li><a href="teollisuus.html">Teollisuus</a></li><li><a href="tyhja.html?s=Datakeskukset">Datakeskukset</a></li><li><a href="tyhja.html?s=Infra">Infra</a></li><li><a href="tyhja.html?s=Pys%C3%A4k%C3%B6inti%20ja%20toimitilat">Pysäköinti ja toimitilat</a></li><li><a href="betonirakentaminen.html">Betonirakentaminen ja paikallavalu</a></li>
+      </ul></div>
+      <div><h2 class="hf-foot__h"><a href="referenssit.html">Referenssit</a></h2><ul>
+        <li><a href="referenssit.html">Kaikki referenssit</a></li><li><a href="suunnitteluyhteistyo.html">Suunnitteluyhteistyö</a></li><li><a href="toteutusmallit.html">Toteutusmallit</a></li>
+      </ul></div>
+      <div><h2 class="hf-foot__h"><a href="ksbr.html">KSBR</a></h2><ul>
+        <li><a href="ksbr.html">Meistä</a></li><li><a href="laatu-ja-turvallisuus.html">Laatu ja turvallisuus</a></li><li><a href="tyhja.html?s=Ajankohtaista">Ajankohtaista</a></li><li><a href="ura.html">Ura ja työpaikat</a></li><li><a class="hf-foot__ext" href="https://ollirimpilainen.github.io/grk-lofi-proto/">GRK-konserni</a></li>
+      </ul></div>
+      <div><h2 class="hf-foot__h"><a href="yhteystiedot.html">Yhteystiedot</a></h2><ul>
+        <li><a href="yhteyshenkilot.html">Yhteyshenkilöt</a></li><li><a href="tarjouspyynto.html">Tarjouspyyntö</a></li><li><a href="yhteystiedot.html#laskutustiedot">Laskutustiedot</a></li>
+      </ul></div>
+    </nav>
+  </div>
+  <div class="hf-foot__bottom">
+    <p class="hf-foot__legal"><span>© 2026 Keski-Suomen Betonirakenne Oy · A GRK Company</span><a href="tyhja.html?s=Tietosuoja">Tietosuoja</a><a href="tyhja.html?s=Ev%C3%A4steasetukset">Evästeasetukset</a><a href="tyhja.html?s=Ilmoituskanava">Ilmoituskanava</a></p>
+    <nav class="hf-foot__langs" aria-label="Kieli"><a href="index.html" aria-current="true">FI</a><a href="tyhja.html?s=KSBR%20in%20English" lang="en">EN</a><a href="tyhja.html?s=KSBR%20p%C3%A5%20svenska" lang="sv">SV</a></nav>
+    <ul class="hf-foot__some">
+      <li><a href="#" aria-label="KSBR LinkedInissä"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3zM9.5 9.75h3.8v1.6h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.55 4.78 5.87v5.48h-4v-4.86c0-1.16-.02-2.65-1.66-2.65-1.66 0-1.92 1.26-1.92 2.57v4.94h-4z"></path></svg></a></li>
+    </ul>
+  </div>
+</footer>
+
+
+
+</div>
+<div class="proto-note" role="status" aria-live="polite"></div>
+<style>
+.proto-note{position:fixed;left:50%;bottom:24px;z-index:100;transform:translate(-50%,16px);max-width:min(520px,calc(100% - 32px));padding:14px 20px;background:#252d32;color:#f4f5f6;font:400 15px/22px "Lofi Sans",Archivo,Arial,sans-serif;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+.proto-note.is-on{opacity:1;transform:translate(-50%,0)}
+</style>
+<script>
+(function(){var n=document.querySelector('.proto-note'),t;
+function say(m){n.textContent=m;n.classList.add('is-on');clearTimeout(t);t=setTimeout(function(){n.classList.remove('is-on')},2600)}
+document.addEventListener('click',function(e){var a=e.target.closest('a[href="#"]');if(a){e.preventDefault();say('Tämä toiminto ei ole käytössä prototyypissä.')}
+var b=e.target.closest('button[type="button"],button:not([type])');if(b&&b.closest('form')){e.preventDefault();say('Lomake ei lähetä tietoja prototyypissä.')}});
+document.addEventListener('submit',function(e){e.preventDefault();say('Lomake ei lähetä tietoja prototyypissä.')});
+var st=document.querySelector('.b-stick');if(st){document.documentElement.classList.add('js-stick');var yh=document.getElementById('yhteyshenkilot'),ft=document.querySelector('footer');
+function chk(){var vh=innerHeight,on=scrollY>vh*0.9;[yh,ft].forEach(function(el){if(el){var r=el.getBoundingClientRect();if(r.top<vh&&r.bottom>0)on=false}});st.classList.toggle('is-on',on)}
+addEventListener('scroll',chk,{passive:true});addEventListener('resize',chk);chk()}
+})();
+</script>
+<script src="assets/nav.js"></script>
+</body>
+</html>

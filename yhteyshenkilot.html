@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Yhteyshenkilöt · KSBR lo-fi -prototyyppi</title>
+
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/bundle.css">
+<link rel="stylesheet" href="css/nav.css">
+<style>
+@font-face{font-family:"Lofi Head";src:url(assets/archivo.woff2) format("woff2");font-weight:700 700;font-stretch:102% 102%;font-display:swap}
+@font-face{font-family:"Lofi Sans";src:url(assets/archivo.woff2) format("woff2");font-weight:400 700;font-stretch:103.5% 103.5%;font-display:swap}
+body{margin:0;background:#fff}
+a{color:#3f4c55}a:hover{color:#252d32}
+.b-crumbs{margin:0;list-style:none}
+.p-tag{margin:2px 0 0;font-size:14px;line-height:20px;font-weight:500;color:var(--ink-2-strong)}
+.lf-search{position:relative}
+.lf-search .b-ico{position:absolute;left:16px;top:50%;width:20px;height:20px;transform:translateY(-50%);color:var(--ink-2-strong)}
+.lf-search .b-input{padding-left:48px}
+.lf-filters{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:16px;align-items:end;padding:28px;background:var(--surface-2)}
+.lf-filters .b-field{min-width:0}
+.lf-filters label{color:var(--ink)}
+.lf-chips{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:16px;font-size:14px;line-height:20px}
+.lf-chips span{color:var(--ink-2-strong);margin-right:4px}
+.lf-chips a{padding:5px 12px;border:1px solid var(--line);text-decoration:none;font-weight:500;color:var(--ink)}
+.lf-chips a:hover{border-color:var(--ink)}
+.lf-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:32px 0 24px;padding-top:16px;border-top:1px solid var(--line);font-size:16px;line-height:24px;color:var(--ink-2-strong)}
+.lf-bar b{font-weight:700;color:var(--ink)}
+.lf-bar a{color:var(--ink);font-weight:700}
+.people3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 32px}
+.page-head{display:grid;gap:20px;max-width:880px;padding:24px 80px 56px}
+.page-head .b-lead{margin:0}
+@media (max-width:900px){.lf-filters,.people3{grid-template-columns:1fr}.lf-bar{flex-direction:column;align-items:flex-start}.page-head{padding:24px 20px 40px}}
+.yh-grp{padding-top:56px}
+.yh-grp__h{display:flex;align-items:baseline;gap:12px;margin:0 0 32px;padding-top:24px;border-top:2px solid var(--ink);font:700 28px/34px var(--font-head)}
+.yh-grp__h span{font:700 16px/24px var(--font-sans);color:var(--accent)}
+.yh-grp__more{margin:32px 0 0}
+@media (max-width:900px){
+  .km-c{grid-template-columns:1fr!important;gap:32px!important}
+  .b-why__grid,#miksi-grk .b-why__grid{grid-template-columns:1fr 1fr!important;row-gap:40px}
+  .hf-sm,.hf-mx__b .b-method{grid-template-columns:1fr!important}
+  .t3__c>p{white-space:normal}
+}
+@media (max-width:600px){
+  .b-why__grid,#miksi-grk .b-why__grid{grid-template-columns:1fr!important}
+  .b-root :where(h1,h2,h3),.b-root :where(h1,h2,h3) a{hyphens:auto;-webkit-hyphens:auto}
+}
+
+</style>
+</head>
+<body>
+<div class="b-root hf lofi" style="width: 100%;">
+
+
+<header class="b-nav">
+  <div class="b-nav__util b-nav__util--v2"><span class="b-nav__util-r"><a href="https://ollirimpilainen.github.io/grk-lofi-proto/">GRK-konserni ↗</a><a href="tyhja.html?s=Media">Media</a><span class="b-nav__util-sep" aria-hidden="true"></span><a class="b-nav__util-search" href="#"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>Haku</a><a href="index.html" aria-current="true">FI</a><a href="tyhja.html?s=KSBR%20in%20English" lang="en">EN</a><a href="tyhja.html?s=KSBR%20p%C3%A5%20svenska" lang="sv">SV</a></span></div>
+  <div class="b-nav__bar">
+    <a class="b-nav__brand" href="index.html"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="KSBR, A GRK Company" width="120" height="40"></a>
+    <nav class="b-nav__menu" aria-label="Päävalikko">
+      <a class="b-nav__item b-nav__item--menu" href="tyhja.html?s=Toimialat">Toimialat</a>
+      <a class="b-nav__item" href="referenssit.html">Referenssit</a>
+      <a class="b-nav__item" href="talvibetonointi.html">Ajankohtaista</a>
+      <a class="b-nav__item b-nav__item--menu" href="ura.html">Ura</a>
+      <a class="b-nav__item b-nav__item--menu" href="ksbr.html">KSBR</a>
+    </nav>
+    <a class="b-nav__contact" href="yhteystiedot.html">Yhteystiedot</a>
+  </div>
+</header>
+<ol class="b-crumbs"><li><a href="index.html">Etusivu</a></li><li><a href="yhteystiedot.html">Yhteystiedot</a></li><li aria-current="page">Yhteyshenkilöt</li></ol>
+
+<header class="b-pagehead">
+  <div>
+  <h1 class="b-h1">Yhteyshenkilöt</h1>
+  <p class="b-lead">Löydä oikea ihminen toimialan, roolin tai paikkakunnan mukaan. Sähköpostit ovat muotoa etunimi.sukunimi@ksbr.fi.</p>
+  </div>
+</header>
+
+<section class="b-section" style="padding-top: 0;"><div class="b-inner">
+  <form class="lf-filters" role="search">
+    <div class="b-field"><label for="yh-haku">Hae nimellä</label><div class="lf-search"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg><input class="b-input" id="yh-haku" type="search" placeholder="Esim. Marko Leppänen"></div></div>
+    <div class="b-field"><label for="yh-toimiala">Toimiala</label><select class="b-select" id="yh-toimiala"><option>Kaikki</option><option>Energia</option><option>Teollisuus</option><option>Infra</option><option>Rakentaminen</option><option>Datakeskukset</option></select></div>
+    <div class="b-field"><label for="yh-rooli">Rooli</label><select class="b-select" id="yh-rooli"><option>Kaikki</option><option>Johto</option><option>Myynti ja tarjoukset</option><option>Projektit</option><option>HSEQ</option><option>Talous ja HR</option><option>Viestintä</option></select></div>
+    <div class="b-field"><label for="yh-paikka">Paikkakunta</label><select class="b-select" id="yh-paikka"><option>Kaikki</option><option>Pihtipudas</option><option>Oulu</option><option>Vantaa</option><option>Lappeenranta</option><option>Nivala</option><option>Ruotsi</option></select></div>
+  </form>
+  <p class="lf-bar"><span><b>45 henkilöä</b></span><a href="#">Tyhjennä valinnat</a></p>
+  <section class="yh-grp" aria-labelledby="g-johto"><h2 class="yh-grp__h" id="g-johto">Johto <span>3</span></h2><div class="people3"><div class="b-person" id="marko-leppanen"><div class="b-person__img" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5"></circle><path d="M5 20a7 7 0 0 1 14 0"></path></svg></div><div><p class="b-person__name">Marko Leppänen</p><p class="b-person__role">Toimitusjohtaja</p><p class="b-person__ch"><a href="mailto:marko.leppanen@ksbr.fi"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>marko.leppanen@ksbr.fi</a></p></div></div><div class="b-person" id="tuija-muhonen"><div class="b-person__img" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5"></circle><path d="M5 20a7 7 0 0 1 14 0"></path></svg></div><div><p class="b-person__name">Tuija Muhonen</p><p class="b-person__role">Talous- ja hallintojohtaja</p><p class="b-person__ch"><a href="mailto:tuija.muhonen@ksbr.fi"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>tuija.muhonen@ksbr.fi</a></p></div></div><div class="b-person" id="tuomas-skantz"><div class="b-person__img" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5"></circle><path d="M5 20a7 7 0 0 1 14 0"></path></svg></div><div><p class="b-person__name">Tuomas Skantz</p><p class="b-person__role">Hallituksen jäsen</p><p class="b-person__ch"><a href="mailto:tuomas.skantz@ksbr.fi"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>tuomas.skantz@ksbr.fi</a></p></div></div></div></section><section class="yh-grp" aria-labelledby="g-toimialat"><h2 class="yh-grp__h" id="g-toimialat">Toimialat <span>3</span></h2><div class="people3"><div class="b-person" id="janne-kananen"><div class="b-person__img" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5"></circle><path d="M5 20a7 7 0 0 1 14 0"></path></svg></div><div><p class="b-person__name">Janne Kananen</p><p class="b-person__role">Toimialajohtaja, energia ja infra</p><p class="p-tag">Energia · Infra</p><p class="b-person__ch"><a href="tel:+358406318181"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"></path></svg>+358 40 631 8181</a><a href="mailto:janne.kananen@ksbr.fi"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>janne.kananen@ksbr.fi</a></p></div></div><div class="b-person" id="harri-kytokangas"><div class="b-person__img" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5"></circle><path d="M5 20a7 7 0 0 1 14 0"></path></svg></div><div><p class="b-person__name">Harri Kytökangas</p><p class="b-person__role">Toimialajohtaja, teollisuus</p><p class="p-tag">Teollisuus</p><p class="b-person__ch"><a href="tel:+358505695342"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"></path></svg>+358 50 569 5342</a><a href="mailto:harri.kytokangas@ksbr.fi"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>harri.kytokangas@ksbr.fi</a></p></div></div><div class="b-person" id="kasimir-kvist"><div class="b-person__img" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5"></circle><path d="M5 20a7 7 0 0 1 14 0"></path></svg></div><div><p class="b-person__name">Kasimir Kvist</p><p class="b-person__role">Toimialajohtaja, rakentaminen</p><p class="p-tag">Rakentaminen</p><p class="b-person__ch"><a href="tel:+358503760165"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"></path></svg>+358 50 376 0165</a><a href="mailto:kasimir.kvist@ksbr.fi"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>kasimir.kvist@ksbr.fi</a></p></div></div></div></section><section class="yh-grp" aria-labelledby="g-projektit"><h2 class="yh-grp__h" id="g-projektit">Projektit <span>20</span></h2><div class="people3"><div class="b-person" id="tuomas-pukinkorva"><div class="b-person__img" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5"></circle><path d="M5 20a7 7 0 0 1 14 0"></path></svg></div><div><p class="b-person__name">Tuomas Pukinkorva</p><p class="b-person__role">Projektipäällikkö</p><p class="p-tag">Energia</p><p class="b-person__ch"><a href="mailto:tuomas.pukinkorva@ksbr.fi"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>tuomas.pukinkorva@ksbr.fi</a></p></div></div><div class="b-person" id="marko-koskinen"><div class="b-person__img" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5"></circle><path d="M5 20a7 7 0 0 1 14 0"></path></svg></div><div><p class="b-person__name">Marko Koskinen</p><p class="b-person__role">Projektipäällikkö</p><p class="p-tag">Rakentaminen</p><p class="b-person__ch"><a href="mailto:marko.koskinen@ksbr.fi"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>marko.koskinen@ksbr.fi</a></p></div></div><div class="b-person" id="janne-somero"><div class="b-person__img" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5"></circle><path d="M5 20a7 7 0 0 1 14 0"></path></svg></div><div><p class="b-person__name">Janne Somero</p><p class="b-person__role">Projektipäällikkö</p><p class="p-tag">Infra</p><p class="b-person__ch"><a href="mailto:janne.somero@ksbr.fi"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>janne.somero@ksbr.fi</a></p></div></div></div><p class="yh-grp__more"><a class="b-link" href="tyhja.html?s=N%C3%A4yt%C3%A4%20kaikki%20projektihenkil%C3%B6t%20%2820%29">Näytä kaikki projektihenkilöt (20)</a></p></section><section class="yh-grp" aria-labelledby="g-laatu-ja-turvallisuus"><h2 class="yh-grp__h" id="g-laatu-ja-turvallisuus">Laatu ja turvallisuus <span>2</span></h2><div class="people3"><div class="b-person" id="jenni-veijola"><div class="b-person__img" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5"></circle><path d="M5 20a7 7 0 0 1 14 0"></path></svg></div><div><p class="b-person__name">Jenni Veijola</p><p class="b-person__role">HSEQ-päällikkö</p><p class="b-person__ch"><a href="mailto:jenni.veijola@ksbr.fi"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>jenni.veijola@ksbr.fi</a></p></div></div><div class="b-person" id="manu-laine"><div class="b-person__img" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5"></circle><path d="M5 20a7 7 0 0 1 14 0"></path></svg></div><div><p class="b-person__name">Manu Laine</p><p class="b-person__role">HSE-päällikkö</p><p class="b-person__ch"><a href="mailto:manu.laine@ksbr.fi"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>manu.laine@ksbr.fi</a></p></div></div></div></section><section class="yh-grp" aria-labelledby="g-ksbr-sverige"><h2 class="yh-grp__h" id="g-ksbr-sverige">KSBR Sverige <span>1</span></h2><div class="people3"><div class="b-person" id="andreas-olson"><div class="b-person__img" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5"></circle><path d="M5 20a7 7 0 0 1 14 0"></path></svg></div><div><p class="b-person__name">Andreas Olson</p><p class="b-person__role">Myyntipäällikkö</p><p class="p-tag">Sverige</p><p class="b-person__ch"><a href="tel:+46702425689"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"></path></svg>+46 70 242 5689</a><a href="mailto:andreas.olson@ksbr.fi"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>andreas.olson@ksbr.fi</a></p></div></div></div></section><section class="yh-grp" aria-labelledby="g-ksbr-rent"><h2 class="yh-grp__h" id="g-ksbr-rent">KSBR Rent <span>1</span></h2><div class="people3"><div class="b-person" id="juha-takanen"><div class="b-person__img" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5"></circle><path d="M5 20a7 7 0 0 1 14 0"></path></svg></div><div><p class="b-person__name">Juha Takanen</p><p class="b-person__role">Toimitusjohtaja</p><p class="p-tag">Kalusto ja huolto</p><p class="b-person__ch"><a href="mailto:juha.takanen@ksbr.fi"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>juha.takanen@ksbr.fi</a></p></div></div></div></section><section class="yh-grp" aria-labelledby="g-viestinta-ja-media"><h2 class="yh-grp__h" id="g-viestinta-ja-media">Viestintä ja media <span>1</span></h2><div class="people3"><div class="b-person" id="stiina-ikonen"><div class="b-person__img" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5"></circle><path d="M5 20a7 7 0 0 1 14 0"></path></svg></div><div><p class="b-person__name">Stiina Ikonen</p><p class="b-person__role">Viestintäpäällikkö</p><p class="b-person__ch"><a href="mailto:stiina.ikonen@ksbr.fi"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>stiina.ikonen@ksbr.fi</a></p></div></div></div></section>
+</div></section>
+
+<section class="hf-edge hf-edge--dark" id="toihin">
+  <div class="tx">
+    <h2 class="hf-h2">Haluatko rakentaa Suomen vaativimpia kohteita?</h2>
+    <p class="hf-lead">Meillä et pääse helpolla, mutta pääset eteenpäin.</p>
+    <div class="acts acts--stack"><a class="b-btn b-btn--secondary" href="ura.html#avoimet">Avoimet työpaikat</a><ul class="hf-linklist"><li><a href="ura.html">Kesätyö ja harjoittelu</a></li><li><a href="ura.html">Ura KSBR:llä</a></li></ul></div>
+  </div>
+  <div class="ph"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="KSBR:n työnjohto keskustelee työmaalla"></div>
+</section>
+
+<footer class="b-footer hf-foot">
+  <div class="hf-foot__top">
+    <div class="hf-foot__brand">
+      <a class="hf-foot__logo" href="index.html"><img class="b-footer__logo" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="KSBR, A GRK Company" width="96" height="72"></a>
+      <p class="hf-foot__tag">Vaativan rakentamisen erikoisjoukko Suomessa ja Ruotsissa.</p>
+      <p class="hf-foot__tel">Asematie 5, 44800 Pihtipudas · <a href="mailto:info@ksbr.fi">info@ksbr.fi</a></p>
+      <div class="hf-foot__acts"><a class="b-btn" href="yhteystiedot.html">Ota yhteyttä</a><a class="hf-foot__more" href="tarjouspyynto.html">Tarjouspyyntö</a></div>
+    </div>
+    <nav class="hf-foot__nav" aria-label="Alatunnisteen valikko">
+      <div><h2 class="hf-foot__h"><a href="tyhja.html?s=Toimialat">Toimialat</a></h2><ul>
+        <li><a href="tuulivoima.html">Energia</a></li><li><a href="teollisuus.html">Teollisuus</a></li><li><a href="tyhja.html?s=Datakeskukset">Datakeskukset</a></li><li><a href="tyhja.html?s=Infra">Infra</a></li><li><a href="tyhja.html?s=Pys%C3%A4k%C3%B6inti%20ja%20toimitilat">Pysäköinti ja toimitilat</a></li><li><a href="betonirakentaminen.html">Betonirakentaminen ja paikallavalu</a></li>
+      </ul></div>
+      <div><h2 class="hf-foot__h"><a href="referenssit.html">Referenssit</a></h2><ul>
+        <li><a href="referenssit.html">Kaikki referenssit</a></li><li><a href="suunnitteluyhteistyo.html">Suunnitteluyhteistyö</a></li><li><a href="toteutusmallit.html">Toteutusmallit</a></li>
+      </ul></div>
+      <div><h2 class="hf-foot__h"><a href="ksbr.html">KSBR</a></h2><ul>
+        <li><a href="ksbr.html">Meistä</a></li><li><a href="laatu-ja-turvallisuus.html">Laatu ja turvallisuus</a></li><li><a href="tyhja.html?s=Ajankohtaista">Ajankohtaista</a></li><li><a href="ura.html">Ura ja työpaikat</a></li><li><a class="hf-foot__ext" href="https://ollirimpilainen.github.io/grk-lofi-proto/">GRK-konserni</a></li>
+      </ul></div>
+      <div><h2 class="hf-foot__h"><a href="yhteystiedot.html">Yhteystiedot</a></h2><ul>
+        <li><a href="yhteyshenkilot.html">Yhteyshenkilöt</a></li><li><a href="tarjouspyynto.html">Tarjouspyyntö</a></li><li><a href="yhteystiedot.html#laskutustiedot">Laskutustiedot</a></li>
+      </ul></div>
+    </nav>
+  </div>
+  <div class="hf-foot__bottom">
+    <p class="hf-foot__legal"><span>© 2026 Keski-Suomen Betonirakenne Oy · A GRK Company</span><a href="tyhja.html?s=Tietosuoja">Tietosuoja</a><a href="tyhja.html?s=Ev%C3%A4steasetukset">Evästeasetukset</a><a href="tyhja.html?s=Ilmoituskanava">Ilmoituskanava</a></p>
+    <nav class="hf-foot__langs" aria-label="Kieli"><a href="index.html" aria-current="true">FI</a><a href="tyhja.html?s=KSBR%20in%20English" lang="en">EN</a><a href="tyhja.html?s=KSBR%20p%C3%A5%20svenska" lang="sv">SV</a></nav>
+    <ul class="hf-foot__some">
+      <li><a href="#" aria-label="KSBR LinkedInissä"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3zM9.5 9.75h3.8v1.6h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.55 4.78 5.87v5.48h-4v-4.86c0-1.16-.02-2.65-1.66-2.65-1.66 0-1.92 1.26-1.92 2.57v4.94h-4z"></path></svg></a></li>
+    </ul>
+  </div>
+</footer>
+
+
+</div>
+<div class="proto-note" role="status" aria-live="polite"></div>
+<style>
+.proto-note{position:fixed;left:50%;bottom:24px;z-index:100;transform:translate(-50%,16px);max-width:min(520px,calc(100% - 32px));padding:14px 20px;background:#252d32;color:#f4f5f6;font:400 15px/22px "Lofi Sans",Archivo,Arial,sans-serif;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+.proto-note.is-on{opacity:1;transform:translate(-50%,0)}
+</style>
+<script>
+(function(){var n=document.querySelector('.proto-note'),t;
+function say(m){n.textContent=m;n.classList.add('is-on');clearTimeout(t);t=setTimeout(function(){n.classList.remove('is-on')},2600)}
+document.addEventListener('click',function(e){var a=e.target.closest('a[href="#"]');if(a){e.preventDefault();say('Tämä toiminto ei ole käytössä prototyypissä.')}
+var b=e.target.closest('button[type="button"],button:not([type])');if(b&&b.closest('form')){e.preventDefault();say('Lomake ei lähetä tietoja prototyypissä.')}});
+document.addEventListener('submit',function(e){e.preventDefault();say('Lomake ei lähetä tietoja prototyypissä.')});
+var st=document.querySelector('.b-stick');if(st){document.documentElement.classList.add('js-stick');var yh=document.getElementById('yhteyshenkilot'),ft=document.querySelector('footer');
+function chk(){var vh=innerHeight,on=scrollY>vh*0.9;[yh,ft].forEach(function(el){if(el){var r=el.getBoundingClientRect();if(r.top<vh&&r.bottom>0)on=false}});st.classList.toggle('is-on',on)}
+addEventListener('scroll',chk,{passive:true});addEventListener('resize',chk);chk()}
+})();
+</script>
+<script src="assets/nav.js"></script>
+</body>
+</html>

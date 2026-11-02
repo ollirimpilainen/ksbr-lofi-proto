@@ -1,0 +1,58 @@
+/* KSBR lo-fi — generated from tokens.json */
+:root, [data-theme="light"] {
+  --ink: #3f4c55;
+  --ink-2: #69757d;
+  --line: #dfe3e6;
+  --surface: #e8ebed;
+  --surface-2: #f4f5f6;
+  --line-strong: #b4bbc0;
+  --surface-dark: #252d32;
+  --white: #ffffff;
+  --accent: #fd5000;
+  --gap: #f1efe4;
+  --tint: #f4f5f6;
+  --on-dark: #f4f5f6;
+  --on-dark-muted: #b4bbc0;
+  --on-dark-line: #4b575f;
+  --line-dark: #3f4c55;
+  --on-accent: #ffffff;
+  --ink-2-strong: #5f6a72;
+}
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 80px;
+  --space-10: 96px;
+  --radius-0: 0;
+  --radius-card: 4px;
+  --radius-field: 4px;
+  --radius-button: 4px;
+  --radius-note: 8px;
+  --page-width: 1440px;
+  --content-width: 1280px;
+  --text-width: 760px;
+  --nav-height: 80px;
+  --control-height: 56px;
+  --font-head: "Lofi Head", Archivo, Arial, sans-serif;
+  --font-sans: "Lofi Sans", Archivo, Arial, sans-serif;
+  --text-display: 700 64px/68px var(--font-head);
+  --text-h1: 700 52px/60px var(--font-head);
+  --text-h2: 700 36px/44px var(--font-head);
+  --text-h3: 700 24px/32px var(--font-head);
+  --text-h4: 700 18px/28px var(--font-head);
+  --text-eyebrow: 700 14px/20px var(--font-head);
+  --text-lead: 400 20px/30px var(--font-sans);
+  --text-body: 400 18px/28px var(--font-sans);
+  --text-small: 400 14px/20px var(--font-sans);
+  --text-label: 700 14px/20px var(--font-sans);
+  --text-stat: 700 48px/56px var(--font-sans);
+  --text-button: 700 18px/24px var(--font-sans);
+  --text-link: 500 18px/24px var(--font-sans);
+  --text-nav: 500 16px/24px var(--font-sans);
+}

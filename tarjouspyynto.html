@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Lähetä tarjouspyyntö · KSBR lo-fi -prototyyppi</title>
+
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/bundle.css">
+<link rel="stylesheet" href="css/nav.css">
+<style>
+@font-face{font-family:"Lofi Head";src:url(assets/archivo.woff2) format("woff2");font-weight:700 700;font-stretch:102% 102%;font-display:swap}
+@font-face{font-family:"Lofi Sans";src:url(assets/archivo.woff2) format("woff2");font-weight:400 700;font-stretch:103.5% 103.5%;font-display:swap}
+body{margin:0;background:#fff}
+a{color:#3f4c55}a:hover{color:#252d32}
+.b-crumbs{margin:0;list-style:none}
+.p-tag{margin:2px 0 0;font-size:14px;line-height:20px;font-weight:500;color:var(--ink-2-strong)}
+.lf-search{position:relative}
+.lf-search .b-ico{position:absolute;left:16px;top:50%;width:20px;height:20px;transform:translateY(-50%);color:var(--ink-2-strong)}
+.lf-search .b-input{padding-left:48px}
+.lf-filters{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:16px;align-items:end;padding:28px;background:var(--surface-2)}
+.lf-filters .b-field{min-width:0}
+.lf-filters label{color:var(--ink)}
+.lf-chips{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:16px;font-size:14px;line-height:20px}
+.lf-chips span{color:var(--ink-2-strong);margin-right:4px}
+.lf-chips a{padding:5px 12px;border:1px solid var(--line);text-decoration:none;font-weight:500;color:var(--ink)}
+.lf-chips a:hover{border-color:var(--ink)}
+.lf-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:32px 0 24px;padding-top:16px;border-top:1px solid var(--line);font-size:16px;line-height:24px;color:var(--ink-2-strong)}
+.lf-bar b{font-weight:700;color:var(--ink)}
+.lf-bar a{color:var(--ink);font-weight:700}
+.people3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 32px}
+.page-head{display:grid;gap:20px;max-width:880px;padding:24px 80px 56px}
+.page-head .b-lead{margin:0}
+@media (max-width:900px){.lf-filters,.people3{grid-template-columns:1fr}.lf-bar{flex-direction:column;align-items:flex-start}.page-head{padding:24px 20px 40px}}
+.tp-grid{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:80px;align-items:start}
+.tp-grid .b-form{grid-template-columns:repeat(2,minmax(0,1fr))}
+.tp-sub{grid-column:1/-1;margin:16px 0 0;padding-top:24px;border-top:1px solid var(--line);font:700 20px/26px var(--font-head)}
+.tp-sub span{font:400 16px/24px var(--font-sans);color:var(--ink-2-strong)}
+.tp-drop{display:grid;place-items:center;gap:4px;padding:32px;border:1px dashed var(--ink-2);text-align:center;font-size:16px;line-height:24px;color:var(--ink-2-strong)}
+.tp-drop b{color:var(--ink)}
+.tp-aside{display:grid;gap:28px;padding:32px;background:var(--surface-2);position:sticky;top:24px}
+.tp-aside h2{margin:0;font:700 22px/28px var(--font-head)}
+.tp-aside .b-person__img{background:#fff}
+.tp-next{display:grid;gap:14px;margin:0;padding:0;list-style:none}
+.tp-next li{display:grid;grid-template-columns:28px 1fr;gap:8px;font-size:16px;line-height:24px}
+.tp-next b{font:700 20px/24px var(--font-head);color:var(--accent)}
+.tp-trust{display:flex;flex-wrap:wrap;gap:12px 32px;margin:0;padding:24px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:14px;line-height:20px;font-weight:700}
+.tp-trust span:first-child{color:var(--ink-2-strong)}
+@media (max-width:900px){.tp-grid,.tp-grid .b-form{grid-template-columns:1fr;gap:32px}.tp-aside{position:static}}
+@media (max-width:900px){
+  .km-c{grid-template-columns:1fr!important;gap:32px!important}
+  .b-why__grid,#miksi-grk .b-why__grid{grid-template-columns:1fr 1fr!important;row-gap:40px}
+  .hf-sm,.hf-mx__b .b-method{grid-template-columns:1fr!important}
+  .t3__c>p{white-space:normal}
+}
+@media (max-width:600px){
+  .b-why__grid,#miksi-grk .b-why__grid{grid-template-columns:1fr!important}
+  .b-root :where(h1,h2,h3),.b-root :where(h1,h2,h3) a{hyphens:auto;-webkit-hyphens:auto}
+}
+
+</style>
+</head>
+<body>
+<div class="b-root hf lofi" style="width: 100%;">
+
+
+<header class="b-nav">
+  <div class="b-nav__util b-nav__util--v2"><span class="b-nav__util-r"><a href="https://ollirimpilainen.github.io/grk-lofi-proto/">GRK-konserni ↗</a><a href="tyhja.html?s=Media">Media</a><span class="b-nav__util-sep" aria-hidden="true"></span><a class="b-nav__util-search" href="#"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>Haku</a><a href="index.html" aria-current="true">FI</a><a href="tyhja.html?s=KSBR%20in%20English" lang="en">EN</a><a href="tyhja.html?s=KSBR%20p%C3%A5%20svenska" lang="sv">SV</a></span></div>
+  <div class="b-nav__bar">
+    <a class="b-nav__brand" href="index.html"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="KSBR, A GRK Company" width="120" height="40"></a>
+    <nav class="b-nav__menu" aria-label="Päävalikko">
+      <a class="b-nav__item b-nav__item--menu" href="tyhja.html?s=Toimialat">Toimialat</a>
+      <a class="b-nav__item" href="referenssit.html">Referenssit</a>
+      <a class="b-nav__item" href="talvibetonointi.html">Ajankohtaista</a>
+      <a class="b-nav__item b-nav__item--menu" href="ura.html">Ura</a>
+      <a class="b-nav__item b-nav__item--menu" href="ksbr.html">KSBR</a>
+    </nav>
+    <a class="b-nav__contact" href="yhteystiedot.html">Yhteystiedot</a>
+  </div>
+</header>
+<ol class="b-crumbs"><li><a href="index.html">Etusivu</a></li><li><a href="yhteystiedot.html">Yhteystiedot</a></li><li aria-current="page">Tarjouspyyntö</li></ol>
+
+<header class="b-pagehead">
+  <div>
+  <h1 class="b-h1">Lähetä tarjouspyyntö</h1>
+  <p class="b-lead">Kerro hankkeesta, niin oikean toimialan asiantuntija ottaa yhteyttä. Voit myös lähettää asiakirjat suoraan: <a href="mailto:tarjouslaskenta@ksbr.fi">tarjouslaskenta@ksbr.fi</a></p>
+  </div>
+</header>
+
+<section class="b-section" style="padding-top: 0;"><div class="b-inner tp-grid">
+  <form class="b-form">
+    <div class="b-field b-field--full"><label for="tp-toimiala">Toimiala *</label><select class="b-select" id="tp-toimiala"><option>Energia</option><option>Teollisuus</option><option>Datakeskukset</option><option>Betonirakentaminen</option><option>Infra</option><option>Pysäköinti ja toimitilat</option><option>En tiedä</option></select><small>Valittu valmiiksi, kun tulet toimialasivulta.</small></div>
+    <div class="b-field b-field--full"><label for="tp-kuvaus">Hankkeen kuvaus *</label><textarea class="b-textarea" id="tp-kuvaus" placeholder="Mitä rakennetaan, laajuus ja tärkeimmät reunaehdot"></textarea></div>
+    <div class="b-field b-field--full"><label for="tp-sijainti">Sijainti *</label><input class="b-input" id="tp-sijainti" type="text" placeholder="Paikkakunta"></div>
+    <div class="b-field"><label for="tp-nimi">Nimi *</label><input class="b-input" id="tp-nimi" type="text"></div>
+    <div class="b-field"><label for="tp-yritys">Yritys *</label><input class="b-input" id="tp-yritys" type="text"></div>
+    <div class="b-field"><label for="tp-email">Sähköposti *</label><input class="b-input" id="tp-email" type="email"></div>
+    <div class="b-field"><label for="tp-puh">Puhelin</label><input class="b-input" id="tp-puh" type="tel"></div>
+    <p class="tp-sub">Lisätiedot <span>(vapaaehtoinen)</span></p>
+    <div class="b-field"><label for="tp-vaihe">Hankkeen vaihe</label><select class="b-select" id="tp-vaihe"><option>Valitse</option><option>Suunnittelu</option><option>Tarjousvaihe</option><option>Toteutus</option></select></div>
+    <div class="b-field"><label for="tp-malli">Toteutusmalli</label><select class="b-select" id="tp-malli"><option>En tiedä vielä</option><option>Kokonaisurakka</option><option>KVR</option><option>SR</option><option>BoP</option></select></div>
+    <div class="b-field b-field--full"><label for="tp-aika">Aikataulu</label><input class="b-input" id="tp-aika" type="text" placeholder="Esim. rakentaminen alkaa keväällä 2027"></div>
+    <div class="b-field b-field--full"><label>Liitteet</label><div class="tp-drop"><b>Vedä tiedostot tähän tai valitse tiedostot</b>Piirustukset, asiakirjat ja tarjouspyyntöpaketit</div></div>
+    <div class="b-form__foot"><button class="b-btn" type="button">Lähetä tarjouspyyntö</button><span class="b-small">Käsittelemme tiedot <a href="tyhja.html?s=Tietosuojaseloste">tietosuojaselosteen</a> mukaisesti.</span></div>
+  </form>
+  <aside class="tp-aside">
+    <div class="b-person"><div class="b-person__img" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5"></circle><path d="M5 20a7 7 0 0 1 14 0"></path></svg></div><div><p class="b-person__name">Tarjouslaskenta</p><p class="b-person__role">Tarjouksista vastaava</p><p class="b-person__ch"><a href="mailto:tarjouslaskenta@ksbr.fi"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>tarjouslaskenta@ksbr.fi</a></p></div></div>
+    <h2>Mitä tapahtuu seuraavaksi</h2>
+    <ol class="tp-next"><li><b>1</b><span>Saat vahvistuksen sähköpostiisi.</span></li><li><b>2</b><span>Toimialan asiantuntija ottaa yhteyttä.</span></li><li><b>3</b><span>Sovimme tarjouksesta tai tapaamisesta.</span></li></ol>
+  </aside>
+</div></section>
+
+<section class="b-section b-section--tight" style="padding-top: 0;"><div class="b-inner"><p class="tp-trust"><span>Sertifioitu</span><span>ISO 9001</span><span>ISO 14001</span><span>ISO 45001</span><span>RALA-pätevyys</span><span>A GRK Company</span></p></div></section>
+
+<section class="b-section b-section--gray" id="yhteyshenkilot"><div class="b-inner">
+  <div class="b-head"><h2 class="b-h2">Kysy ensin toimialajohtajalta</h2><p class="b-body">Jos hanke on vasta ajatus, soita suoraan.</p></div>
+  <div class="b-people"><div class="b-person"><div class="b-person__img" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5"></circle><path d="M5 20a7 7 0 0 1 14 0"></path></svg></div><div><p class="b-person__name">Janne Kananen</p><p class="b-person__role">Toimialajohtaja, energia ja infra</p><p class="b-person__ch"><a href="tel:+358406318181"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"></path></svg>+358 40 631 8181</a><a href="mailto:janne.kananen@ksbr.fi"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>janne.kananen@ksbr.fi</a></p></div></div><div class="b-person"><div class="b-person__img" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5"></circle><path d="M5 20a7 7 0 0 1 14 0"></path></svg></div><div><p class="b-person__name">Harri Kytökangas</p><p class="b-person__role">Toimialajohtaja, teollisuus</p><p class="b-person__ch"><a href="tel:+358505695342"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"></path></svg>+358 50 569 5342</a><a href="mailto:harri.kytokangas@ksbr.fi"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>harri.kytokangas@ksbr.fi</a></p></div></div><div class="b-person"><div class="b-person__img" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5"></circle><path d="M5 20a7 7 0 0 1 14 0"></path></svg></div><div><p class="b-person__name">Kasimir Kvist</p><p class="b-person__role">Toimialajohtaja, rakentaminen</p><p class="b-person__ch"><a href="tel:+358503760165"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"></path></svg>+358 50 376 0165</a><a href="mailto:kasimir.kvist@ksbr.fi"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>kasimir.kvist@ksbr.fi</a></p></div></div><div class="b-person"><div class="b-person__img" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5"></circle><path d="M5 20a7 7 0 0 1 14 0"></path></svg></div><div><p class="b-person__name">Andreas Olson</p><p class="b-person__role">Myyntipäällikkö, KSBR Sverige</p><p class="b-person__ch"><a href="tel:+46702425689"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"></path></svg>+46 70 242 5689</a><a href="mailto:andreas.olson@ksbr.fi"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>andreas.olson@ksbr.fi</a></p></div></div></div>
+  <p style="margin-top: 32px;"><a class="b-link" href="yhteyshenkilot.html">Kaikki yhteyshenkilöt</a></p>
+</div></section>
+
+<section class="hf-edge hf-edge--dark" id="toihin">
+  <div class="tx">
+    <h2 class="hf-h2">Haluatko rakentaa Suomen vaativimpia kohteita?</h2>
+    <p class="hf-lead">Meillä et pääse helpolla, mutta pääset eteenpäin.</p>
+    <div class="acts acts--stack"><a class="b-btn b-btn--secondary" href="ura.html#avoimet">Avoimet työpaikat</a><ul class="hf-linklist"><li><a href="ura.html">Kesätyö ja harjoittelu</a></li><li><a href="ura.html">Ura KSBR:llä</a></li></ul></div>
+  </div>
+  <div class="ph"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="KSBR:n työnjohto keskustelee työmaalla"></div>
+</section>
+
+<footer class="b-footer hf-foot">
+  <div class="hf-foot__top">
+    <div class="hf-foot__brand">
+      <a class="hf-foot__logo" href="index.html"><img class="b-footer__logo" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="KSBR, A GRK Company" width="96" height="72"></a>
+      <p class="hf-foot__tag">Vaativan rakentamisen erikoisjoukko Suomessa ja Ruotsissa.</p>
+      <p class="hf-foot__tel">Asematie 5, 44800 Pihtipudas · <a href="mailto:info@ksbr.fi">info@ksbr.fi</a></p>
+      <div class="hf-foot__acts"><a class="b-btn" href="yhteystiedot.html">Ota yhteyttä</a><a class="hf-foot__more" href="tarjouspyynto.html">Tarjouspyyntö</a></div>
+    </div>
+    <nav class="hf-foot__nav" aria-label="Alatunnisteen valikko">
+      <div><h2 class="hf-foot__h"><a href="tyhja.html?s=Toimialat">Toimialat</a></h2><ul>
+        <li><a href="tuulivoima.html">Energia</a></li><li><a href="teollisuus.html">Teollisuus</a></li><li><a href="tyhja.html?s=Datakeskukset">Datakeskukset</a></li><li><a href="tyhja.html?s=Infra">Infra</a></li><li><a href="tyhja.html?s=Pys%C3%A4k%C3%B6inti%20ja%20toimitilat">Pysäköinti ja toimitilat</a></li><li><a href="betonirakentaminen.html">Betonirakentaminen ja paikallavalu</a></li>
+      </ul></div>
+      <div><h2 class="hf-foot__h"><a href="referenssit.html">Referenssit</a></h2><ul>
+        <li><a href="referenssit.html">Kaikki referenssit</a></li><li><a href="suunnitteluyhteistyo.html">Suunnitteluyhteistyö</a></li><li><a href="toteutusmallit.html">Toteutusmallit</a></li>
+      </ul></div>
+      <div><h2 class="hf-foot__h"><a href="ksbr.html">KSBR</a></h2><ul>
+        <li><a href="ksbr.html">Meistä</a></li><li><a href="laatu-ja-turvallisuus.html">Laatu ja turvallisuus</a></li><li><a href="tyhja.html?s=Ajankohtaista">Ajankohtaista</a></li><li><a href="ura.html">Ura ja työpaikat</a></li><li><a class="hf-foot__ext" href="https://ollirimpilainen.github.io/grk-lofi-proto/">GRK-konserni</a></li>
+      </ul></div>
+      <div><h2 class="hf-foot__h"><a href="yhteystiedot.html">Yhteystiedot</a></h2><ul>
+        <li><a href="yhteyshenkilot.html">Yhteyshenkilöt</a></li><li><a href="tarjouspyynto.html">Tarjouspyyntö</a></li><li><a href="yhteystiedot.html#laskutustiedot">Laskutustiedot</a></li>
+      </ul></div>
+    </nav>
+  </div>
+  <div class="hf-foot__bottom">
+    <p class="hf-foot__legal"><span>© 2026 Keski-Suomen Betonirakenne Oy · A GRK Company</span><a href="tyhja.html?s=Tietosuoja">Tietosuoja</a><a href="tyhja.html?s=Ev%C3%A4steasetukset">Evästeasetukset</a><a href="tyhja.html?s=Ilmoituskanava">Ilmoituskanava</a></p>
+    <nav class="hf-foot__langs" aria-label="Kieli"><a href="index.html" aria-current="true">FI</a><a href="tyhja.html?s=KSBR%20in%20English" lang="en">EN</a><a href="tyhja.html?s=KSBR%20p%C3%A5%20svenska" lang="sv">SV</a></nav>
+    <ul class="hf-foot__some">
+      <li><a href="#" aria-label="KSBR LinkedInissä"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3zM9.5 9.75h3.8v1.6h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.55 4.78 5.87v5.48h-4v-4.86c0-1.16-.02-2.65-1.66-2.65-1.66 0-1.92 1.26-1.92 2.57v4.94h-4z"></path></svg></a></li>
+    </ul>
+  </div>
+</footer>
+
+
+</div>
+<div class="proto-note" role="status" aria-live="polite"></div>
+<style>
+.proto-note{position:fixed;left:50%;bottom:24px;z-index:100;transform:translate(-50%,16px);max-width:min(520px,calc(100% - 32px));padding:14px 20px;background:#252d32;color:#f4f5f6;font:400 15px/22px "Lofi Sans",Archivo,Arial,sans-serif;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+.proto-note.is-on{opacity:1;transform:translate(-50%,0)}
+</style>
+<script>
+(function(){var n=document.querySelector('.proto-note'),t;
+function say(m){n.textContent=m;n.classList.add('is-on');clearTimeout(t);t=setTimeout(function(){n.classList.remove('is-on')},2600)}
+document.addEventListener('click',function(e){var a=e.target.closest('a[href="#"]');if(a){e.preventDefault();say('Tämä toiminto ei ole käytössä prototyypissä.')}
+var b=e.target.closest('button[type="button"],button:not([type])');if(b&&b.closest('form')){e.preventDefault();say('Lomake ei lähetä tietoja prototyypissä.')}});
+document.addEventListener('submit',function(e){e.preventDefault();say('Lomake ei lähetä tietoja prototyypissä.')});
+var st=document.querySelector('.b-stick');if(st){document.documentElement.classList.add('js-stick');var yh=document.getElementById('yhteyshenkilot'),ft=document.querySelector('footer');
+function chk(){var vh=innerHeight,on=scrollY>vh*0.9;[yh,ft].forEach(function(el){if(el){var r=el.getBoundingClientRect();if(r.top<vh&&r.bottom>0)on=false}});st.classList.toggle('is-on',on)}
+addEventListener('scroll',chk,{passive:true});addEventListener('resize',chk);chk()}
+})();
+</script>
+<script src="assets/nav.js"></script>
+</body>
+</html>

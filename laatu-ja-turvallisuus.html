@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Laatu, turvallisuus ja sertifikaatit · KSBR lo-fi -prototyyppi</title>
+
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/bundle.css">
+<link rel="stylesheet" href="css/nav.css">
+<style>
+@font-face{font-family:"Lofi Head";src:url(assets/archivo.woff2) format("woff2");font-weight:700 700;font-stretch:102% 102%;font-display:swap}
+@font-face{font-family:"Lofi Sans";src:url(assets/archivo.woff2) format("woff2");font-weight:400 700;font-stretch:103.5% 103.5%;font-display:swap}
+body{margin:0;background:#fff}
+a{color:#3f4c55}a:hover{color:#252d32}
+.certs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.cert-head{display:flex;align-items:center;gap:16px}
+.seal{flex:none;width:72px;height:72px;border-radius:4px;background:var(--surface);display:grid;place-items:center;box-shadow:inset 0 0 0 1px var(--line)}
+.seal span{font-size:12px;line-height:16px;font-weight:500;color:var(--ink-2-strong)}
+.cert{display:grid;grid-template-rows:auto auto 1fr auto;gap:12px;padding:32px 28px;background:#fff;border:1px solid var(--line);border-radius:4px}
+.cert-code{margin:0;font-size:32px;line-height:36px;font-weight:700;letter-spacing:-.01em;font-variant-numeric:lining-nums tabular-nums}
+.cert-name{margin:0;font-size:16px;line-height:24px;font-weight:700;color:var(--ink-2-strong);padding-bottom:16px;border-bottom:1px solid var(--surface)}
+.cert p.what{margin:0;font-size:16px;line-height:24px}
+.cert .b-link{font-size:15px;margin-top:8px}
+.qa-head{display:grid;grid-template-columns:7fr 5fr;gap:80px;align-items:end;margin-bottom:48px}
+.qa-head .b-head{margin:0}
+.quote{margin:64px 0 0;padding-top:48px;border-top:1px solid var(--line);display:grid;grid-template-columns:4fr 8fr;gap:80px;align-items:start}
+.quote blockquote{margin:0;font-size:32px;line-height:42px;font-weight:500;text-wrap:balance}
+.quote blockquote::before{content:"”";display:block;font-size:80px;line-height:56px;font-weight:700;color:var(--accent)}
+.quote figcaption{font-size:16px;line-height:24px;padding-top:56px}
+.quote figcaption b{display:block}
+.co2{margin:0;justify-self:end;width:100%;max-width:420px}
+.co2-bars{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:end}
+.co2-col{display:grid;justify-items:center;align-content:end;gap:8px}
+.co2-bar{width:100%;max-width:120px;border-radius:4px 4px 0 0;background:var(--on-dark-line);box-shadow:0 1px 0 var(--on-dark-line)}
+.co2-bar--now{background:var(--accent)}
+.co2-val{font-size:24px;line-height:32px;font-weight:700;color:var(--on-dark-muted)}
+.co2-val--now{color:var(--accent)}
+.co2-lbl{margin-top:4px;font-size:14px;line-height:20px;color:var(--on-dark-muted);text-align:center}
+.co2 figcaption{margin-top:20px;font-size:14px;line-height:20px;color:var(--on-dark-muted)}
+.resp{background:var(--surface-dark);color:#fff}
+.resp-grid{display:grid;grid-template-columns:7fr 5fr;gap:80px;align-items:end}
+.resp h2{margin:0;font-size:52px;line-height:60px;font-weight:700;letter-spacing:-.015em;color:#fff;text-wrap:balance}
+.resp h2 em{font-style:normal;color:var(--accent)}
+.resp p{margin:16px 0 0;font-size:18px;line-height:28px;color:var(--on-dark-muted)}
+.resp .b-link{color:#fff}
+.resp .b-link:hover{color:#fff}
+@media (max-width:900px){
+.b-h2,.resp h2{font-size:26px;line-height:32px}
+.certs{grid-template-columns:repeat(2,minmax(0,1fr))}
+.b-check,.b-people,.b-form{grid-template-columns:1fr}
+.qa-head,.quote,.resp-grid,.b-lightform,.b-footer__top{grid-template-columns:1fr;gap:24px}
+.quote figcaption{padding-top:0}
+}
+.hf-sec{padding:72px 20px}.hf-h2{font-size:34px;line-height:40px}
+.hf-hero{min-height:640px}.hf-hero__text{padding:0 20px 120px}.hf-hero h1{font-size:52px;line-height:50px}
+.hf-tasks{grid-template-columns:1fr;margin:-48px 20px 0}.hf-task+.hf-task{border-left:0;border-top:1px solid var(--surface)}
+.hf-num b{font-size:88px}.hf-edge .tx{padding:56px 20px}.hf-band__text{padding:0 20px 48px}.hf-band h2{font-size:30px;line-height:36px}
+.hf-herostats{margin:0 20px}.hf-herostats b{font-size:48px}
+.hf-hero--page .recruiter-mini b{color:var(--on-dark-muted)}
+.hf .b-section{padding:72px 20px}.hf .b-h2{font-size:34px;line-height:40px}.hf .b-h1{font-size:44px;line-height:48px}
+.hf-hero--page{min-height:600px}.hf-hero--page h1,.hf-hero--page .b-h1{font-size:44px;line-height:48px}.hf-hero--page .hf-hero__text{padding:0 20px 72px}
+@media (max-width:1200px){.hf-ind,.hf-steps{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:600px){.hf .hf-hero h1,.hf .hf-hero--page h1{overflow-wrap:anywhere}}
+@media (max-width:600px){.hf-ind>:last-child:nth-child(odd){grid-column:1/-1}}
+@media (max-width:600px){.certs{grid-template-columns:1fr}}
+body.menu-open{overflow:hidden}
+.lofi .story .b-media{min-height:0}
+@media (max-width:900px){
+  .km-c{grid-template-columns:1fr!important;gap:32px!important}
+  .b-why__grid,#miksi-grk .b-why__grid{grid-template-columns:1fr 1fr!important;row-gap:40px}
+  .hf-sm,.hf-mx__b .b-method{grid-template-columns:1fr!important}
+  .t3__c>p{white-space:normal}
+}
+@media (max-width:600px){
+  .b-why__grid,#miksi-grk .b-why__grid{grid-template-columns:1fr!important}
+  .b-root :where(h1,h2,h3),.b-root :where(h1,h2,h3) a{hyphens:auto;-webkit-hyphens:auto}
+}
+
+</style>
+</head>
+<body>
+<div class="b-root hf lofi" style="width: 100%;">
+
+
+<header class="b-nav">
+  <div class="b-nav__util b-nav__util--v2"><span class="b-nav__util-r"><a href="https://ollirimpilainen.github.io/grk-lofi-proto/">GRK-konserni ↗</a><a href="tyhja.html?s=Media">Media</a><span class="b-nav__util-sep" aria-hidden="true"></span><a class="b-nav__util-search" href="#"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>Haku</a><a href="index.html" aria-current="true">FI</a><a href="tyhja.html?s=KSBR%20in%20English" lang="en">EN</a><a href="tyhja.html?s=KSBR%20p%C3%A5%20svenska" lang="sv">SV</a></span></div>
+  <div class="b-nav__bar">
+    <a class="b-nav__brand" href="index.html"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="KSBR, A GRK Company" width="120" height="40"></a>
+    <nav class="b-nav__menu" aria-label="Päävalikko">
+      <a class="b-nav__item b-nav__item--menu" href="tyhja.html?s=Toimialat">Toimialat</a>
+      <a class="b-nav__item" href="referenssit.html">Referenssit</a>
+      <a class="b-nav__item" href="talvibetonointi.html">Ajankohtaista</a>
+      <a class="b-nav__item b-nav__item--menu" href="ura.html">Ura</a>
+      <a class="b-nav__item b-nav__item--menu" href="ksbr.html" aria-current="page">KSBR</a>
+    </nav>
+    <a class="b-nav__contact" href="yhteystiedot.html">Yhteystiedot</a>
+  </div>
+</header>
+<main id="sisalto">
+
+<section class="hf-hero hf-hero--page">
+  <ol class="b-crumbs"><li><a href="index.html">Etusivu</a></li><li><a href="ksbr.html">KSBR</a></li><li aria-current="page">Laatu, turvallisuus ja sertifikaatit</li></ol>
+  <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="KSBR:n timpuri muottitöissä">
+  <div class="hf-hero__text">
+    <h1 class="b-h1">Laatu, turvallisuus ja sertifikaatit</h1>
+    <p class="b-lead">Johtamisjärjestelmämme on sertifioitu laadun, ympäristön sekä työterveyden ja -turvallisuuden standardeilla, ja meillä on RALA-pätevyys teollisuusrakentamisen pääurakointiin. Alta näet, mitä se tarkoittaa hankkeessasi.</p>
+    <div class="b-btns"><a class="b-btn" href="#yhteyshenkilot">Ota yhteyttä</a></div>
+  </div>
+</section>
+
+<section class="b-section b-section--gray"><div class="b-inner">
+  <div class="b-head"><h2 class="b-h2">Sertifikaatit</h2><p class="b-body">Ulkopuolinen arvioija tarkastaa toimintamme säännöllisesti. Sertifikaatit voit ladata tarjousvertailua varten.</p></div>
+  <div class="certs">
+    <article class="cert"><div class="cert-head"><div class="seal" role="img" aria-label="Sertifiointielimen ISO 9001 -merkki"><span>Merkki</span></div><p class="cert-code">ISO 9001</p></div><p class="cert-name">Laatu</p><p class="what">Toimintatavat on kuvattu ja tarkastettu, joten laatu ei ole yksittäisen työnjohtajan varassa.</p><a class="b-link" href="#">Lataa sertifikaatti (PDF)</a></article>
+    <article class="cert"><div class="cert-head"><div class="seal" role="img" aria-label="Sertifiointielimen ISO 14001 -merkki"><span>Merkki</span></div><p class="cert-code">ISO 14001</p></div><p class="cert-name">Ympäristö</p><p class="what">Työmaan ympäristövaikutukset tunnistetaan ja niitä seurataan koko hankkeen ajan.</p><a class="b-link" href="#">Lataa sertifikaatti (PDF)</a></article>
+    <article class="cert"><div class="cert-head"><div class="seal" role="img" aria-label="Sertifiointielimen ISO 45001 -merkki"><span>Merkki</span></div><p class="cert-code">ISO 45001</p></div><p class="cert-name">Työterveys ja -turvallisuus</p><p class="what">Riskit arvioidaan ennen töitä, ja jokainen poikkeama käsitellään ja raportoidaan.</p><a class="b-link" href="#">Lataa sertifikaatti (PDF)</a></article>
+    <article class="cert"><div class="cert-head"><div class="seal" role="img" aria-label="RALA-pätevyysmerkki"><span>Merkki</span></div><p class="cert-code">RALA</p></div><p class="cert-name">Teollisuusrakentamisen pääurakointi</p><p class="what">Pätevyys on arvioitu ulkopuolisesti, joten tilaajan ei tarvitse tehdä samaa selvitystä itse.</p><a class="b-link" href="#">Lataa pätevyystodistus (PDF)</a></article>
+  </div>
+</div></section>
+
+<section class="b-section"><div class="b-inner">
+  <div class="b-head"><h2 class="b-h2">Näin varmistamme laadun ja turvallisuuden</h2><p class="b-body">Laadun takaavat omat tekijät montussa: sama porukka tekee työn ja vastaa sen jäljestä.</p></div>
+  <ul class="b-check">
+    <li><div><b>Työturvallisuuskortti jokaisella</b><p>Jokaisella työmaalla työskentelevällä on voimassa oleva työturvallisuuskortti.</p></div></li>
+    <li><div><b>Riskit tunnistetaan ja poistetaan</b><p>Työvaiheen riskit käydään läpi ennen töiden alkua, ei vasta poikkeaman jälkeen.</p></div></li>
+    <li><div><b>Siisti ja järjestetty työmaa</b><p>Järjestys on osa turvallisuutta ja näkyy tilaajalle jokaisella käynnillä.</p></div></li>
+    <li><div><b>Poikkeamat raportoidaan tilaajalle</b><p>Kerromme poikkeamista suoraan ja tarkasti, emmekä siirrä ongelmia eteenpäin.</p></div></li>
+    <li><div><b>Perehdytys tehdasalueen sääntöihin</b><p>Teollisuuskohteissa jokainen tekijä perehdytetään tilaajan omiin turvallisuussääntöihin.</p></div></li>
+  </ul>
+  <figure class="b-quote" style="margin-top: 64px; padding-top: 48px; border-top: 1px solid #c8c8c7;">
+    <div class="b-media b-media--square"><img loading="lazy" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Jenni Veijola, HSEQ-päällikkö"></div>
+    <div><blockquote>Työturvallisuus ei ole pelkkää välineurheilua.</blockquote><figcaption><b>Jenni Veijola</b>HSEQ-päällikkö (työterveys, turvallisuus, ympäristö ja laatu)</figcaption></div>
+  </figure>
+</div></section>
+
+<section class="b-section resp"><div class="b-inner resp-grid">
+  <div><h2 style="margin-top: 8px;">Hiilijalanjälki <em>puolitettu</em> parissa vuodessa</h2><p>Liikevaihtoon suhteutettuna.</p><div class="b-btns" style="margin-top: 32px;"><a class="b-btn" href="#"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m-5-5 5 5 5-5M5 20h14"></path></svg>Lataa vastuullisuusraportti 2025 (PDF)</a></div></div>
+  <figure class="co2" aria-label="Hiilijalanjälki liikevaihtoon suhteutettuna: lähtötaso 100 prosenttia, vuonna 2025 noin 50 prosenttia.">
+    <div class="co2-bars">
+      <div class="co2-col"><span class="co2-val">100 %</span><div class="co2-bar" style="height: 240px;"></div><span class="co2-lbl">Lähtötaso</span></div>
+      <div class="co2-col"><span class="co2-val co2-val--now">50 %</span><div class="co2-bar co2-bar--now" style="height: 120px;"></div><span class="co2-lbl">2025</span></div>
+    </div>
+    <figcaption>Hiilijalanjälki suhteessa liikevaihtoon</figcaption>
+  </figure>
+</div></section>
+
+<section class="b-section b-section--gray" id="yhteyshenkilot"><div class="b-inner">
+  <div class="b-head"><h2 class="b-h2">Yhteyshenkilöt</h2><p class="b-body">Kysy laadusta ja turvallisuudesta suoraan HSEQ-päälliköltä tai oman toimialasi vastuuhenkilöltä.</p></div>
+  <div class="b-people">
+    <div class="b-person"><div class="b-person__img" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5"></circle><path d="M5 20a7 7 0 0 1 14 0"></path></svg></div><div><p class="b-person__name">Jenni Veijola</p><p class="b-person__role">HSEQ-päällikkö</p><p class="b-person__ch"><a href="mailto:jenni.veijola@ksbr.fi"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>jenni.veijola@ksbr.fi</a></p></div></div>
+    <div class="b-person"><div class="b-person__img" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5"></circle><path d="M5 20a7 7 0 0 1 14 0"></path></svg></div><div><p class="b-person__name">Kasimir Kvist</p><p class="b-person__role">Toimialajohtaja, rakentaminen</p><p class="b-person__ch"><a href="tel:+358503760165"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"></path></svg>+358 50 376 0165</a><a href="mailto:kasimir.kvist@ksbr.fi"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>kasimir.kvist@ksbr.fi</a></p></div></div>
+    <div class="b-person"><div class="b-person__img" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5"></circle><path d="M5 20a7 7 0 0 1 14 0"></path></svg></div><div><p class="b-person__name">Harri Kytökangas</p><p class="b-person__role">Toimialajohtaja, teollisuus</p><p class="b-person__ch"><a href="tel:+358505695342"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"></path></svg>+358 50 569 5342</a><a href="mailto:harri.kytokangas@ksbr.fi"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>harri.kytokangas@ksbr.fi</a></p></div></div>
+  </div>
+  <div class="b-lightform">
+    <div class="b-head" style="margin: 0; align-content: start;"><h3 class="b-h3">Kysy laadusta tai turvallisuudesta</h3><p class="b-body">Esimerkiksi tarjousvertailun liitteet tai tehdasalueen turvallisuusvaatimukset.</p></div>
+    <form class="b-form">
+      <div class="b-field"><label for="la-nimi">Nimi *</label><input class="b-input" id="la-nimi" type="text"></div>
+      <div class="b-field"><label for="la-email">Sähköposti *</label><input class="b-input" id="la-email" type="email"></div>
+      <div class="b-field b-field--full"><label for="la-viesti">Viesti *</label><textarea class="b-textarea" id="la-viesti" placeholder="Mitä haluat tietää?"></textarea></div>
+      <div class="b-form__foot"><button class="b-btn" type="button">Lähetä</button></div>
+    </form>
+  </div>
+</div></section>
+
+</main>
+<section class="hf-edge hf-edge--dark" id="toihin">
+  <div class="tx">
+    <h2 class="hf-h2">Haluatko rakentaa Suomen vaativimpia kohteita?</h2>
+    <p class="hf-lead">Meillä et pääse helpolla, mutta pääset eteenpäin.</p>
+    <div class="acts acts--stack"><a class="b-btn b-btn--secondary" href="ura.html#avoimet">Avoimet työpaikat</a><ul class="hf-linklist"><li><a href="ura.html">Kesätyö ja harjoittelu</a></li><li><a href="ura.html">Ura KSBR:llä</a></li></ul></div>
+  </div>
+  <div class="ph"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="KSBR:n työnjohto keskustelee työmaalla"></div>
+</section>
+
+<footer class="b-footer hf-foot">
+  <div class="hf-foot__top">
+    <div class="hf-foot__brand">
+      <a class="hf-foot__logo" href="index.html"><img class="b-footer__logo" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="KSBR, A GRK Company" width="96" height="72"></a>
+      <p class="hf-foot__tag">Vaativan rakentamisen erikoisjoukko Suomessa ja Ruotsissa.</p>
+      <p class="hf-foot__tel">Asematie 5, 44800 Pihtipudas · <a href="mailto:info@ksbr.fi">info@ksbr.fi</a></p>
+      <div class="hf-foot__acts"><a class="b-btn" href="yhteystiedot.html">Ota yhteyttä</a><a class="hf-foot__more" href="tarjouspyynto.html">Tarjouspyyntö</a></div>
+    </div>
+    <nav class="hf-foot__nav" aria-label="Alatunnisteen valikko">
+      <div><h2 class="hf-foot__h"><a href="tyhja.html?s=Toimialat">Toimialat</a></h2><ul>
+        <li><a href="tuulivoima.html">Energia</a></li><li><a href="teollisuus.html">Teollisuus</a></li><li><a href="tyhja.html?s=Datakeskukset">Datakeskukset</a></li><li><a href="tyhja.html?s=Infra">Infra</a></li><li><a href="tyhja.html?s=Pys%C3%A4k%C3%B6inti%20ja%20toimitilat">Pysäköinti ja toimitilat</a></li><li><a href="betonirakentaminen.html">Betonirakentaminen ja paikallavalu</a></li>
+      </ul></div>
+      <div><h2 class="hf-foot__h"><a href="referenssit.html">Referenssit</a></h2><ul>
+        <li><a href="referenssit.html">Kaikki referenssit</a></li><li><a href="suunnitteluyhteistyo.html">Suunnitteluyhteistyö</a></li><li><a href="toteutusmallit.html">Toteutusmallit</a></li>
+      </ul></div>
+      <div><h2 class="hf-foot__h"><a href="ksbr.html">KSBR</a></h2><ul>
+        <li><a href="ksbr.html">Meistä</a></li><li><a href="laatu-ja-turvallisuus.html">Laatu ja turvallisuus</a></li><li><a href="tyhja.html?s=Ajankohtaista">Ajankohtaista</a></li><li><a href="ura.html">Ura ja työpaikat</a></li><li><a class="hf-foot__ext" href="https://ollirimpilainen.github.io/grk-lofi-proto/">GRK-konserni</a></li>
+      </ul></div>
+      <div><h2 class="hf-foot__h"><a href="yhteystiedot.html">Yhteystiedot</a></h2><ul>
+        <li><a href="yhteyshenkilot.html">Yhteyshenkilöt</a></li><li><a href="tarjouspyynto.html">Tarjouspyyntö</a></li><li><a href="yhteystiedot.html#laskutustiedot">Laskutustiedot</a></li>
+      </ul></div>
+    </nav>
+  </div>
+  <div class="hf-foot__bottom">
+    <p class="hf-foot__legal"><span>© 2026 Keski-Suomen Betonirakenne Oy · A GRK Company</span><a href="tyhja.html?s=Tietosuoja">Tietosuoja</a><a href="tyhja.html?s=Ev%C3%A4steasetukset">Evästeasetukset</a><a href="tyhja.html?s=Ilmoituskanava">Ilmoituskanava</a></p>
+    <nav class="hf-foot__langs" aria-label="Kieli"><a href="index.html" aria-current="true">FI</a><a href="tyhja.html?s=KSBR%20in%20English" lang="en">EN</a><a href="tyhja.html?s=KSBR%20p%C3%A5%20svenska" lang="sv">SV</a></nav>
+    <ul class="hf-foot__some">
+      <li><a href="#" aria-label="KSBR LinkedInissä"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3zM9.5 9.75h3.8v1.6h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.55 4.78 5.87v5.48h-4v-4.86c0-1.16-.02-2.65-1.66-2.65-1.66 0-1.92 1.26-1.92 2.57v4.94h-4z"></path></svg></a></li>
+    </ul>
+  </div>
+</footer>
+
+
+
+</div>
+<div class="proto-note" role="status" aria-live="polite"></div>
+<style>
+.proto-note{position:fixed;left:50%;bottom:24px;z-index:100;transform:translate(-50%,16px);max-width:min(520px,calc(100% - 32px));padding:14px 20px;background:#252d32;color:#f4f5f6;font:400 15px/22px "Lofi Sans",Archivo,Arial,sans-serif;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+.proto-note.is-on{opacity:1;transform:translate(-50%,0)}
+</style>
+<script>
+(function(){var n=document.querySelector('.proto-note'),t;
+function say(m){n.textContent=m;n.classList.add('is-on');clearTimeout(t);t=setTimeout(function(){n.classList.remove('is-on')},2600)}
+document.addEventListener('click',function(e){var a=e.target.closest('a[href="#"]');if(a){e.preventDefault();say('Tämä toiminto ei ole käytössä prototyypissä.')}
+var b=e.target.closest('button[type="button"],button:not([type])');if(b&&b.closest('form')){e.preventDefault();say('Lomake ei lähetä tietoja prototyypissä.')}});
+document.addEventListener('submit',function(e){e.preventDefault();say('Lomake ei lähetä tietoja prototyypissä.')});
+var st=document.querySelector('.b-stick');if(st){document.documentElement.classList.add('js-stick');var yh=document.getElementById('yhteyshenkilot'),ft=document.querySelector('footer');
+function chk(){var vh=innerHeight,on=scrollY>vh*0.9;[yh,ft].forEach(function(el){if(el){var r=el.getBoundingClientRect();if(r.top<vh&&r.bottom>0)on=false}});st.classList.toggle('is-on',on)}
+addEventListener('scroll',chk,{passive:true});addEventListener('resize',chk);chk()}
+})();
+</script>
+<script src="assets/nav.js"></script>
+</body>
+</html>
