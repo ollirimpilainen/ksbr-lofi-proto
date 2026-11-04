@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Toimialat · KSBR lo-fi -prototyyppi</title>
+
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/bundle.css">
+<link rel="stylesheet" href="css/nav.css">
+<style>
+@font-face{font-family:"Lofi Head";src:url(assets/archivo.woff2) format("woff2");font-weight:700 700;font-stretch:102% 102%;font-display:swap}
+@font-face{font-family:"Lofi Sans";src:url(assets/archivo.woff2) format("woff2");font-weight:400 700;font-stretch:103.5% 103.5%;font-display:swap}
+body{margin:0;background:#fff}
+a{color:#3f4c55}a:hover{color:#252d32}
+.hf-hero>.b-crumbs{position:absolute;z-index:2;top:32px;left:0;right:0;margin:0;padding:0 80px;color:rgba(255,255,255,.85);text-shadow:0 1px 8px rgba(0,0,0,.45)}
+.hf-hero>.b-crumbs a{color:#fff;text-decoration-color:rgba(255,255,255,.5)}
+@media (max-width:900px){.hf-hero>.b-crumbs{padding:0 20px;top:20px}}
+.pa-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:56px 40px;padding-top:40px;border-top:1px solid var(--line)}
+.pa{display:flex;flex-direction:column;align-items:flex-start}.pa ul{width:100%;margin:0;padding:0;list-style:none}
+.pa-ic{display:block;width:88px;height:88px;margin:-10px 0 8px -12px}
+.pa-ic--k{width:72px;height:72px;margin:0 0 16px} /* KSBR:n viivaikonit ilman sisämarginaalia */
+.pa h3{margin:0;font:900 22px/28px var(--font-head)}.pa h3 a{color:var(--ink);text-decoration:none}
+.pa .b-tag{display:inline-flex;align-items:center;gap:6px;margin:10px 0 12px;padding:0;border:0;background:none;color:var(--ink-2-strong);font:700 12px/16px var(--font-sans);letter-spacing:.1em;text-transform:uppercase}
+.pa .b-tag::before{content:"";width:6px;height:6px;background:var(--accent)}
+.pa__d{margin:0 0 16px;font-size:16px;line-height:24px;color:var(--ink-2-strong)}
+.pa li{border-top:1px solid var(--line)}
+.pa li a{display:flex;justify-content:space-between;gap:8px;padding:10px 0;font-size:16px;line-height:24px;color:var(--ink);text-decoration:none}
+.pa li a::after{content:"";flex:none;width:7px;height:7px;border:solid var(--accent);border-width:2px 2px 0 0;transform:translateY(8px) rotate(45deg);margin-right:4px}
+/* Palvelut-hub 28.10.: ei herokuvaa, palvelualueet ensimmäisessä näkymässä */
+.pv-head{display:grid;gap:20px;padding:24px 80px 48px}
+.pv-head .b-h1{margin:0}
+.pv-head .b-lead{margin:0;max-width:760px}
+.pv-head .b-btns{margin-top:12px}
+#toimialat{padding-top:0}
+@media (max-width:900px){.pv-head{padding:24px 20px 40px}}
+.pv-cta{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:48px;align-items:center}
+.pv-cta .b-h2{margin:0 0 12px}
+.pv-cta .b-body{margin:0;font-size:18px;line-height:28px}
+.pv-cta .b-btns{justify-content:flex-end;align-items:center;gap:32px}
+@media (max-width:900px){.pv-cta{grid-template-columns:1fr}.pv-cta .b-btns{justify-content:flex-start}}
+/* Toimialat-hub 28.10.: neljä toimialaa yhdellä rivillä (.pa-grid--4, ei orpokorttia) ja esimerkkikohde kortin alla (.pa__ref, pieni 14/20) */
+.pa-grid--4{grid-template-columns:repeat(4,minmax(0,1fr));gap:56px 32px}
+.pa__ref{margin:16px 0 0;font-size:14px;line-height:20px;color:var(--ink-2-strong)}
+.pa__ref a{color:var(--ink)}
+@media (max-width:900px){.pa-grid--4{grid-template-columns:1fr}}
+/* Taste 22.10.: osio-H2 40 px, hierarkia painolla */
+.hf .b-h2{font-size:40px;line-height:48px;letter-spacing:-.01em}
+/* Tyyppiasteikko 22.10. (Olli: vain määritellyt koot): H1 80/93 · H2 40/48 · H3 28/33 · H4 22/28 · H5 18/24 · leipä 16/24 ja 18/28 · pieni 14/20 · tagi 12/16 · luku 64 */
+.hf .b-h2,.hf .hf-h2{font-size:40px;line-height:48px}
+.hf .b-h3,.hf .hf-mx__t h3,.hf .hf-stack__c h3,.hf .hf-feature__tx h3,.hf .b-svccard h3,.hf .t3__c h3,.hf .pa h3{font-size:28px;line-height:33px}
+.hf .hf-card h3,.hf .b-step h3,.hf .b-why__title,.hf .hf-work__group,.hf .hf-news h3{font-size:22px;line-height:28px}
+.hf .b-why__num,.hf .why-num,.hf .hf-herostats b{font-size:64px;line-height:1}
+.hf .hf-strip h2{font-weight:900;font-size:40px;line-height:48px}
+.hf .hf-work__group{font-weight:900}
+.hf .b-person__name,.hf .me-contact b{font-size:22px;line-height:28px;font-weight:900}
+.hf .en-co__name{font-size:28px;line-height:33px}
+.hf .b-lead,.hf .lead{font-size:22px;line-height:34px}
+.hf .b-head .b-body{font-size:18px;line-height:28px}
+.hf .hf-card .meta,.hf .hf-feature .meta,.hf .hf-pins__pin{font-size:14px;line-height:20px}
+.hf .en-co__num b,.hf .b-svcmap__pin span{font-size:12px;line-height:16px}
+.hf .hf-card p:not(.meta){font-size:16px;line-height:24px}
+@media (max-width:900px){
+  .km-c{grid-template-columns:1fr!important;gap:32px!important}
+  .b-why__grid,#miksi-grk .b-why__grid{grid-template-columns:1fr 1fr!important;row-gap:40px}
+  .hf-sm,.hf-mx__b .b-method{grid-template-columns:1fr!important}
+  .t3__c>p{white-space:normal}
+}
+@media (max-width:600px){
+  .b-why__grid,#miksi-grk .b-why__grid{grid-template-columns:1fr!important}
+  .b-root :where(h1,h2,h3),.b-root :where(h1,h2,h3) a{hyphens:auto;-webkit-hyphens:auto}
+}
+
+</style>
+</head>
+<body>
+<div class="b-root hf lofi" style="width: 100%;">
+
+<header class="b-nav">
+  <div class="b-nav__util b-nav__util--v2"><span class="b-nav__util-r"><a href="https://ollirimpilainen.github.io/grk-lofi-proto/">GRK-konserni ↗</a><a href="tyhja.html?s=Media">Media</a><span class="b-nav__util-sep" aria-hidden="true"></span><a class="b-nav__util-search" href="#"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>Haku</a><a href="index.html" aria-current="true">FI</a><a href="tyhja.html?s=KSBR%20in%20English" lang="en">EN</a><a href="tyhja.html?s=KSBR%20p%C3%A5%20svenska" lang="sv">SV</a></span></div>
+  <div class="b-nav__bar">
+    <a class="b-nav__brand" href="index.html"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="KSBR, A GRK Company" width="120" height="40"></a>
+    <nav class="b-nav__menu" aria-label="Päävalikko">
+      <a class="b-nav__item b-nav__item--menu" href="toimialat.html" aria-current="page">Toimialat</a>
+      <a class="b-nav__item" href="referenssit.html">Referenssit</a>
+      <a class="b-nav__item" href="ajankohtaista.html">Ajankohtaista</a>
+      <a class="b-nav__item b-nav__item--menu" href="ura.html">Ura</a>
+      <a class="b-nav__item b-nav__item--menu" href="ksbr.html">KSBR</a>
+    </nav>
+    <a class="b-nav__contact" href="yhteystiedot.html">Yhteystiedot</a>
+  </div>
+</header>
+<ol class="b-crumbs"><li><a href="index.html">Etusivu</a></li><li aria-current="page">Toimialat</li></ol>
+<header class="b-pagehead"><div>
+  <h1 class="b-h1">Toimialat tuulipuistoista pysäköintitaloihin</h1>
+  <p class="b-lead">Viisi toimialaa Suomessa ja Ruotsissa, ja betonirakentaminen kulkee niiden kaikkien läpi. Valitse omasi, niin näet, mitä rakennamme ja missä olemme onnistuneet.</p>
+  <div class="b-btns"><a class="b-btn" href="tarjouspyynto.html">Kerro hankkeestasi</a></div>
+</div></header>
+<section class="b-section" id="toimialat" style="padding-top:0"><div class="b-inner">
+  <div class="pa-grid"><section class="pa" id="ta-energia"><svg class="pa-ic pa-ic--k" aria-hidden="true" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke-width="14.5" stroke-linecap="round" stroke-linejoin="round"><path stroke="#FD5000" d="M203.0 236.0A12 50 0 1 0 203.0 136.0A12 50 0 1 0 203.0 236.0ZM225.5 275.0A12 50 120 1 0 312.1 325.0A12 50 120 1 0 225.5 275.0ZM180.5 275.0A12 50 240 1 0 93.9 325.0A12 50 240 1 0 180.5 275.0Z"/><path stroke="#000" d="M174 262a29 29 0 1 0 58 0a29 29 0 1 0 -58 0M203 291V460M110 460H249"/><path stroke="#000" d="M352 152a44 44 0 1 0 88 0a44 44 0 1 0 -88 0M396.0 87.0L396.0 55.0M442.0 106.0L464.6 83.4M461.0 152.0L493.0 152.0M442.0 198.0L464.6 220.6M396.0 217.0L396.0 249.0M353.4 201.1L332.4 225.2M331.0 152.0L299.0 152.0M353.4 102.9L332.4 78.8"/><path stroke="#FD5000" d="M289 358H476L508.8 494H255.6ZM272.2 426H492.5M347 358L339 494M419 358L427.5 494"/><path stroke="#000" d="M382 494V543M345 543H420"/></g></svg><h3><a href="tuulivoima.html">Energia</a></h3><span class="b-tag">Energiayhtiöt ja kehittäjät</span><p class="pa__d">Tuulipuistot, sähköasemat, sähköverkot ja akkuenergiavarastot.</p><ul><li><a href="tuulivoima.html#mita-teemme">Tuulipuistot</a></li><li><a href="tuulivoima.html#mita-teemme">Akkuenergiavarastot</a></li><li><a href="tuulivoima.html#mita-teemme">Sähköasemat ja verkot</a></li></ul><p class="pa__ref">Esimerkki: <a href="lestijarven-tuulipuisto.html">Lestijärven tuulipuisto</a></p></section><section class="pa" id="ta-teollisuus"><svg class="pa-ic pa-ic--k" aria-hidden="true" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke-width="14.5" stroke-linecap="round" stroke-linejoin="round"><path stroke="#000" d="M45 117H127V280H185V117H264V280H326V195.5L554 275.5V482H45Z"/><path stroke="#FD5000" d="M45 418H554M330 418V336H554M442 336V418"/></g></svg><h3><a href="teollisuus.html">Teollisuus</a></h3><span class="b-tag">Teollisuusyritykset</span><p class="pa__d">Tehtaat, säiliöt ja prosessitilat käyvän laitoksen ehdoilla.</p><ul><li><a href="teollisuus.html#maanrakennus-ja-perustukset">Maanrakennus ja perustukset</a></li><li><a href="teollisuus.html#koneperustukset">Koneperustukset</a></li><li><a href="teollisuus.html#siilot-ja-sailiot">Siilot, säiliöt ja puhdistamot</a></li><li><a href="teollisuus.html#teollisuusrakennukset">Teollisuusrakennukset ja runko</a></li><li><a href="teollisuus.html#tehtaan-sahkoasema">Tehtaan sähköasema</a></li></ul><p class="pa__ref">Esimerkki: <a href="tyhja.html?s=Nesteen%20j%C3%A4tevesialtaat">Nesteen jätevesialtaat</a></p></section><section class="pa" id="ta-datakeskukset"><svg class="pa-ic pa-ic--k" aria-hidden="true" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke-width="14.5" stroke-linecap="round" stroke-linejoin="round"><path stroke="#000" d="M42 500H557M130 500V110H470V500M130 240H470M130 370H470"/><path stroke="#000" d="M395 175H415M395 305H415M395 435H415"/><path stroke="#FD5000" d="M180 175H320M180 305H320M180 435H320"/></g></svg><h3><a href="datakeskukset.html">Datakeskukset</a></h3><span class="b-tag">Hankeomistajat ja rakennuttajat</span><p class="pa__d">Perustukset, betonirungot ja infra aikataulussa, joka ei jousta.</p><ul><li><a href="datakeskukset.html#mita-teemme">Perustukset</a></li><li><a href="betonirakentaminen.html#rungot">Betonirungot</a></li><li><a href="datakeskukset.html#mita-teemme">Infra</a></li></ul><p class="pa__ref">Esimerkki: <a href="datakeskukset.html#vaativat-kohteet">Datakeskushanke Suomessa</a></p></section><section class="pa" id="ta-infra"><svg class="pa-ic pa-ic--k" aria-hidden="true" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke-width="14.5" stroke-linecap="round" stroke-linejoin="round"><path stroke="#FD5000" d="M45.4 393.8V154.8L85.1 165.2Q100.7 170.4 109.1 184L192.6 318.7M45.4 328.1H111.2V351Q111.2 393.8 67.3 393.8H45.4"/><path stroke="#FD5000" d="M463 328.1H508.9Q516.2 334.3 519.4 350L554.9 387.6V437.7H488Q463 437.7 463 412.6Z"/><path stroke="#000" d="M197.8 328.1L227.6 202.8H336.1L361.2 328.1M274.5 202.8V328.1M197.8 328.1H390.9L411.8 367.7"/><path stroke="#000" d="M160.2 385.5a56.9 56.9 0 1 0 113.8 0a56.9 56.9 0 1 0 -113.8 0M386.8 404.3a38.1 38.1 0 1 0 76.2 0a38.1 38.1 0 1 0 -76.2 0M274 403.8H386.8"/></g></svg><h3><a href="infra.html">Infra</a></h3><span class="b-tag">Verkkoyhtiöt ja energiahankkeet</span><p class="pa__d">Maanrakennus, tiet, nostoalueet ja voimajohtojen perustukset.</p><ul><li><a href="infra.html#mita-teemme">Maanrakennus</a></li><li><a href="tuulivoima.html#mita-teemme">Tiet ja nostoalueet</a></li><li><a href="infra.html#mita-teemme">Voimajohtojen perustukset</a></li></ul><p class="pa__ref">Esimerkki: <a href="infra.html#vaativat-kohteet">HUFO-ilmalinja, 76 perustusta</a></p></section><section class="pa" id="ta-pysakointi"><svg class="pa-ic pa-ic--k" aria-hidden="true" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke-width="14.5" stroke-linecap="round" stroke-linejoin="round"><path stroke="#000" d="M60 60V540M219 60V540M380 60V540M540 60V540M60 303H540M124.5 87.5H155.5Q186.5 87.5 186.5 118.5V241.5Q186.5 272.5 155.5 272.5H124.5Q93.5 272.5 93.5 241.5V118.5Q93.5 87.5 124.5 87.5ZM285.5 87.5H316.5Q347.5 87.5 347.5 118.5V241.5Q347.5 272.5 316.5 272.5H285.5Q254.5 272.5 254.5 241.5V118.5Q254.5 87.5 285.5 87.5ZM124.5 332.5H155.5Q186.5 332.5 186.5 363.5V486.5Q186.5 517.5 155.5 517.5H124.5Q93.5 517.5 93.5 486.5V363.5Q93.5 332.5 124.5 332.5ZM445.5 332.5H476.5Q507.5 332.5 507.5 363.5V486.5Q507.5 517.5 476.5 517.5H445.5Q414.5 517.5 414.5 486.5V363.5Q414.5 332.5 445.5 332.5Z"/><path fill="#000" fill-rule="evenodd" stroke="#000" stroke-width="3" d="M113 121.5Q140 113 167 121.5L164.5 140Q140 135.5 115 140ZM115 217Q140 213 164.5 217L167 233.5Q140 242 112 233.5ZM274 121.5Q301 113 328 121.5L325.5 140Q301 135.5 276 140ZM276 217Q301 213 325.5 217L328 233.5Q301 242 273 233.5ZM113 366.5Q140 358 167 366.5L164.5 385Q140 380.5 115 385ZM115 462Q140 458 164.5 462L167 478.5Q140 487 112 478.5ZM434 366.5Q461 358 488 366.5L485.5 385Q461 380.5 436 385ZM436 462Q461 458 485.5 462L488 478.5Q461 487 433 478.5Z"/><path fill="#FD5000" fill-rule="evenodd" stroke="#FD5000" stroke-width="3" d="M432 149H465A28 25 0 0 1 465 199H449V228H432ZM449 165H465A12.5 9.5 0 0 1 465 184H449ZM270 395H303A28 25 0 0 1 303 445H287V474H270ZM287 411H303A12.5 9.5 0 0 1 303 430H287Z"/></g></svg><h3><a href="pysakointi-ja-toimitilat.html">Pysäköinti ja toimitilat</a></h3><span class="b-tag">Rakennuttajat ja kiinteistöomistajat</span><p class="pa__d">Pysäköintitalot ja toimitilat paikallavaluna tai elementeistä.</p><ul><li><a href="pysakointi-ja-toimitilat.html#mita-teemme">Pysäköintitalot</a></li><li><a href="pysakointi-ja-toimitilat.html#mita-teemme">Toimitilat</a></li></ul><p class="pa__ref">Esimerkki: <a href="pysakointi-ja-toimitilat.html#vaativat-kohteet">Koskensillan pysäköintitalo</a></p></section><section class="pa" id="ta-betoni"><svg class="pa-ic pa-ic--k" aria-hidden="true" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke-width="14.5" stroke-linecap="round" stroke-linejoin="round"><path stroke="#000" d="M276 167.5L451.5 111.3V216"/><path stroke="#000" d="M129 203H171M129 252H171M129 302H171M129 351.5H171"/><path stroke="#000" d="M138 393V487M239 393V487M362.5 393V487M462 393V487M91 487H508"/><path stroke="#FD5000" d="M114 141.4L485 224V393H114Z"/></g></svg><h3><a href="betonirakentaminen.html">Betonirakentaminen ja paikallavalu</a></h3><span class="b-tag">Menetelmä kaikilla toimialoilla</span><p class="pa__d">Menetelmä, joka kulkee kaikkien toimialojen läpi.</p><ul><li><a href="betonirakentaminen.html#paikallavalu">Paikallavalu</a></li><li><a href="betonirakentaminen.html#liukuvalu">Liukuvalu</a></li><li><a href="betonirakentaminen.html#sailiot">Jännitetyt betonisäiliöt</a></li><li><a href="betonirakentaminen.html#rungot">Betonirungot</a></li></ul><p class="pa__ref">Esimerkki: <a href="tyhja.html?s=Safiiriparkki%2C%20Vantaa">Safiiriparkki, Vantaa</a></p></section></div>
+</div></section>
+<section class="b-section sy" id="suunnittelu"><div class="b-inner">
+  <div class="sy-top">
+    <div class="sy-intro">
+      <h2 class="b-h2">Mukaan jo ennen kuin ratkaisut lukitaan</h2>
+      <p class="b-lead">Kun olemme mukana suunnittelussa, rakenteet ja aikataulu optimoidaan ennen investointipäätöstä. Haastamme suunnitelman, jos fiksumpi menetelmä säästää aikaa tai rahaa.</p>
+    </div>
+    <aside class="sy-person" aria-label="Suunnitteluapu">
+      <p class="sy-label">Suunnitteluapu</p>
+      <div class="b-person"><div class="b-person__img" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5"></circle><path d="M5 20a7 7 0 0 1 14 0"></path></svg></div><div><p class="b-person__name">Kasimir Kvist</p><p class="b-person__role">Toimialajohtaja, rakentaminen</p><p class="b-person__ch"><a href="tel:+358503760165"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"></path></svg>+358 50 376 0165</a><a href="mailto:kasimir.kvist@ksbr.fi"><svg class="b-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>kasimir.kvist@ksbr.fi</a></p></div></div>
+      <div class="b-btns"><a class="b-btn" href="tel:+358503760165">Soita asiantuntijalle</a><a class="b-link" href="suunnitteluyhteistyo.html">Varaa suunnittelutyöpaja</a></div>
+    </aside>
+  </div>
+  <ul class="sy-ways">
+    <li><h3>Ennen investointipäätöstä</h3><p>Rakennettavuus, vaihtoehtoiset rakenteet ja menetelmät sekä niiden vaikutus hintaan ja aikatauluun. Samalla valitaan toteutusmalli.</p></li>
+    <li><h3>Toteutussuunnittelu</h3><p>Suunnitelmat tehdään omalle työmaalle: kriittinen polku, pitkät toimitusajat ja talvityöt huomioiden.</p></li>
+    <li><h3>Työmaalla</h3><p>Kun maaperä, toimitukset tai olosuhteet yllättävät, suunnittelija päivittää suunnitelman heti, eikä työmaa jää odottamaan.</p></li>
+  </ul>
+</div></section>
+<section class="hf-edge hf-edge--dark" id="toihin">
+  <div class="tx">
+    <h2 class="hf-h2">Haluatko rakentaa Suomen vaativimpia kohteita?</h2>
+    <p class="hf-lead">Meillä et pääse helpolla, mutta pääset eteenpäin.</p>
+    <div class="acts acts--stack"><a class="b-btn b-btn--secondary" href="ura.html#avoimet">Avoimet työpaikat</a><ul class="hf-linklist"><li><a href="ura.html">Kesätyö ja harjoittelu</a></li><li><a href="ura.html">Ura KSBR:llä</a></li></ul></div>
+  </div>
+  <div class="ph"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="KSBR:n työnjohto keskustelee työmaalla"></div>
+</section>
+<footer class="b-footer hf-foot">
+  <div class="hf-foot__top">
+    <div class="hf-foot__brand">
+      <a class="hf-foot__logo" href="index.html"><img class="b-footer__logo" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="KSBR, A GRK Company" width="96" height="72"></a>
+      <p class="hf-foot__tag">Vaativan rakentamisen erikoisjoukko Suomessa ja Ruotsissa.</p>
+      <p class="hf-foot__tel">Asematie 5, 44800 Pihtipudas · <a href="mailto:info@ksbr.fi">info@ksbr.fi</a></p>
+      <div class="hf-foot__acts"><a class="b-btn" href="yhteystiedot.html">Ota yhteyttä</a><a class="hf-foot__more" href="tarjouspyynto.html">Tarjouspyyntö</a></div>
+    </div>
+    <nav class="hf-foot__nav" aria-label="Alatunnisteen valikko">
+      <div><h2 class="hf-foot__h"><a href="toimialat.html">Toimialat</a></h2><ul>
+        <li><a href="tuulivoima.html">Energia</a></li><li><a href="teollisuus.html">Teollisuus</a></li><li><a href="datakeskukset.html">Datakeskukset</a></li><li><a href="infra.html">Infra</a></li><li><a href="pysakointi-ja-toimitilat.html">Pysäköinti ja toimitilat</a></li><li><a href="betonirakentaminen.html">Betonirakentaminen ja paikallavalu</a></li>
+      </ul></div>
+      <div><h2 class="hf-foot__h"><a href="referenssit.html">Referenssit</a></h2><ul>
+        <li><a href="referenssit.html">Kaikki referenssit</a></li><li><a href="suunnitteluyhteistyo.html">Suunnitteluyhteistyö</a></li><li><a href="toteutusmallit.html">Toteutusmallit</a></li>
+      </ul></div>
+      <div><h2 class="hf-foot__h"><a href="ksbr.html">KSBR</a></h2><ul>
+        <li><a href="ksbr.html">Meistä</a></li><li><a href="laatu-ja-turvallisuus.html">Laatu ja turvallisuus</a></li><li><a href="ajankohtaista.html">Ajankohtaista</a></li><li><a href="ura.html">Ura ja työpaikat</a></li><li><a class="hf-foot__ext" href="https://ollirimpilainen.github.io/grk-lofi-proto/">GRK-konserni</a></li>
+      </ul></div>
+      <div><h2 class="hf-foot__h"><a href="yhteystiedot.html">Yhteystiedot</a></h2><ul>
+        <li><a href="yhteystiedot.html#yhteyshenkilot">Yhteyshenkilöt</a></li><li><a href="tarjouspyynto.html">Tarjouspyyntö</a></li><li><a href="yhteystiedot.html#laskutustiedot">Laskutustiedot</a></li>
+      </ul></div>
+    </nav>
+  </div>
+  <div class="hf-foot__bottom">
+    <p class="hf-foot__legal"><span>© 2026 Keski-Suomen Betonirakenne Oy · A GRK Company</span><a href="tyhja.html?s=Tietosuoja">Tietosuoja</a><a href="tyhja.html?s=Ev%C3%A4steasetukset">Evästeasetukset</a><a href="tyhja.html?s=Ilmoituskanava">Ilmoituskanava</a></p>
+    <nav class="hf-foot__langs" aria-label="Kieli"><a href="index.html" aria-current="true">FI</a><a href="tyhja.html?s=KSBR%20in%20English" lang="en">EN</a><a href="tyhja.html?s=KSBR%20p%C3%A5%20svenska" lang="sv">SV</a></nav>
+    <ul class="hf-foot__some">
+      <li><a href="#" aria-label="KSBR LinkedInissä"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3zM9.5 9.75h3.8v1.6h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.55 4.78 5.87v5.48h-4v-4.86c0-1.16-.02-2.65-1.66-2.65-1.66 0-1.92 1.26-1.92 2.57v4.94h-4z"></path></svg></a></li>
+    </ul>
+  </div>
+</footer>
+
+</div>
+<div class="proto-note" role="status" aria-live="polite"></div>
+<style>
+.proto-note{position:fixed;left:50%;bottom:24px;z-index:100;transform:translate(-50%,16px);max-width:min(520px,calc(100% - 32px));padding:14px 20px;background:#252d32;color:#f4f5f6;font:400 15px/22px "Lofi Sans",Archivo,Arial,sans-serif;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+.proto-note.is-on{opacity:1;transform:translate(-50%,0)}
+</style>
+<script>
+(function(){var n=document.querySelector('.proto-note'),t;
+function say(m){n.textContent=m;n.classList.add('is-on');clearTimeout(t);t=setTimeout(function(){n.classList.remove('is-on')},2600)}
+document.addEventListener('click',function(e){var a=e.target.closest('a[href="#"]');if(a){e.preventDefault();say('Tämä toiminto ei ole käytössä prototyypissä.')}
+var b=e.target.closest('button[type="button"],button:not([type])');if(b&&b.closest('form')){e.preventDefault();say('Lomake ei lähetä tietoja prototyypissä.')}});
+document.addEventListener('submit',function(e){e.preventDefault();say('Lomake ei lähetä tietoja prototyypissä.')});
+var st=document.querySelector('.b-stick');if(st){document.documentElement.classList.add('js-stick');var yh=document.getElementById('yhteyshenkilot'),ft=document.querySelector('footer');
+function chk(){var vh=innerHeight,on=scrollY>vh*0.9;[yh,ft].forEach(function(el){if(el){var r=el.getBoundingClientRect();if(r.top<vh&&r.bottom>0)on=false}});st.classList.toggle('is-on',on)}
+addEventListener('scroll',chk,{passive:true});addEventListener('resize',chk);chk()}
+})();
+</script>
+<script src="assets/nav.js"></script>
+</body>
+</html>

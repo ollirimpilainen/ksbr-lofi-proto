@@ -1885,3 +1885,38 @@ a.hf-sm__ref:hover b{text-decoration:underline;text-decoration-color:var(--accen
 @media (max-width:600px){.b-quote{grid-template-columns:1fr}}
 /* Kohdekortit: 4 korttia yhdelle riville (KSBR Tuulivoima 2.11.) */
 @media (min-width:901px){.hf-cards:has(> .hf-card:nth-child(4):last-child){grid-template-columns:repeat(4,minmax(0,1fr))}}
+
+/* =====================================================================
+   hf-band 3.11.2026 (Olli: KSBR:n hifi-etusivun nosto). WP: core/cover, koko leveyden kuva ja teksti vasemmassa alakulmassa.
+   Lo-fi: kuva paikkamerkkinä, ei oikeaa kuvaa.
+   ===================================================================== */
+.hf-band{position:relative;min-height:720px;display:grid;align-content:end;overflow:hidden;color:#fff}
+.hf-band>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hf-band::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 62% 70% at 0% 100%,rgba(0,0,0,.62) 0%,rgba(0,0,0,.28) 55%,rgba(0,0,0,0) 100%)}
+.hf-band__text{position:relative;z-index:1;padding:0 80px 72px;max-width:900px}
+.hf-band h2{margin:0;font:var(--text-h1);letter-spacing:-.02em}
+.hf-band__sub{margin:16px 0 0;max-width:52ch;font:var(--text-lead)}
+.hf-band .b-link{display:inline-block;margin-top:24px;color:#fff}
+@media (max-width:900px){.hf-band{min-height:560px}.hf-band__text{padding:0 20px 48px}.hf-band h2{font:var(--text-h2)}}
+.lofi .hf-band{color:var(--ink);background-color:var(--surface);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' fill='none' stroke='%23b4bbc0' stroke-width='1.5'%3E%3Crect x='6' y='10' width='36' height='28'/%3E%3Ccircle cx='17' cy='20' r='3.5'/%3E%3Cpath d='M6 34l11-10 8 7 6-5 11 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center 40%;background-size:96px}
+.lofi .hf-band>img{opacity:0}
+.lofi .hf-band::after{display:none}
+.lofi .hf-band__sub{color:var(--ink-2-strong)}
+.lofi .hf-band .b-link{color:var(--ink)}
+.lofi .hf-band :is(h2,p,a){text-shadow:none}
+
+/* 3.11. (Olli): liikaa valkoista Ennen kuin valitset -lohkon ja seuraavan valkoisen osion välissä: kaksi valkoista peräkkäin = jälkimmäiseltä yläväli pois */
+.lofi #miksi-ksbr.b-why + .b-section:not(.b-section--gray):not(.sy){padding-top:0}
+
+/* 4.11. (Olli): heron faktarivi jatkuu koko heron leveydellä yhtenä rivinä; otsikko ja ingressi pitävät omat merkkirajansa */
+.hf-hero--page .hf-hero__text:has(.b-facts){max-width:none}
+
+/* 4.11. (Olli): toimialaländärin Mitä teemme pystylistana kuten GRK, ilman numeroita; ikonin tilalla kuvapaikka (.tl-mx säännöt sivun helmetissä) */
+.tl-mx.kt-mx .hf-mx__s{grid-template-columns:280px minmax(0,1fr);gap:48px;align-items:center}
+.kt-mx__ph{width:100%;aspect-ratio:4/3;margin:0}
+.hf .kt-mx .hf-mx__t h3{font-size:28px;line-height:33px}
+@media (max-width:900px){.tl-mx.kt-mx .hf-mx__s{grid-template-columns:minmax(0,1fr);gap:20px}}
+/* 4.11. (Olli): isompi kuvatila (Betonin Menetelmät, kuvitukset) */
+.tl-mx.kt-mx--lg .hf-mx__s{grid-template-columns:400px minmax(0,1fr)}
+.kt-mx--lg img.kt-mx__ph{height:auto;object-fit:contain}
+@media (max-width:900px){.tl-mx.kt-mx--lg .hf-mx__s{grid-template-columns:minmax(0,1fr)}}
