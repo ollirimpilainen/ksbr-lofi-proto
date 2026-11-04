@@ -1924,3 +1924,4 @@ a.hf-sm__ref:hover b{text-decoration:underline;text-decoration-color:var(--accen
 /* 4.11. (Olli): yhteyshenkilön kieli lipulla (lo-fi-malli: suomalaisille suomi, KSBR Sverigelle ruotsi; oikeat kielet copyvaiheessa) */
 .b-person__lang{display:flex;align-items:center;gap:8px;margin:6px 0 0;font:var(--text-small);color:var(--ink-2-strong)}
 .b-person__lang .b-flag{width:20px;height:13px;flex:none;box-shadow:0 0 0 1px var(--line)}
+.b-person__lang .b-flag+.b-flag{margin-left:-4px} /* 4.11. (Olli): sama henkilö voi puhua useampaa kieltä, liput vierekkäin */
