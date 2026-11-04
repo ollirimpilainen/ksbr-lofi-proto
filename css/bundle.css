@@ -1920,3 +1920,7 @@ a.hf-sm__ref:hover b{text-decoration:underline;text-decoration-color:var(--accen
 .tl-mx.kt-mx--lg .hf-mx__s{grid-template-columns:400px minmax(0,1fr)}
 .kt-mx--lg img.kt-mx__ph{height:auto;object-fit:contain}
 @media (max-width:900px){.tl-mx.kt-mx--lg .hf-mx__s{grid-template-columns:minmax(0,1fr)}}
+
+/* 4.11. (Olli): yhteyshenkilön kieli lipulla (lo-fi-malli: suomalaisille suomi, KSBR Sverigelle ruotsi; oikeat kielet copyvaiheessa) */
+.b-person__lang{display:flex;align-items:center;gap:8px;margin:6px 0 0;font:var(--text-small);color:var(--ink-2-strong)}
+.b-person__lang .b-flag{width:20px;height:13px;flex:none;box-shadow:0 0 0 1px var(--line)}
